@@ -1,0 +1,124 @@
+/* color palette from <https://github.com/vuejs/theme> */
+:root {
+  --vt-c-white: #8ca5a6;
+  --vt-c-white-soft: #f8f8f8;
+  --vt-c-white-mute: #f2f2f2;
+
+  --vt-c-black: #292929;
+  --vt-c-black-soft: #222222;
+  --vt-c-black-mute: #282828;
+
+  --vt-c-indigo: #ffffff;
+
+  --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
+  --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
+  --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
+  --vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
+
+  --vt-c-text-light-1: var(--vt-c-indigo);
+  --vt-c-text-light-2: rgb(255, 255, 255);
+  --vt-c-text-dark-1: var(--vt-c-white);
+  --vt-c-text-dark-2: rgb(255, 255, 255);
+
+  --btn-bg-light-primary:#ff3233;
+  --btn-bg-hover-light-primary:#f00000;
+  --btn-bg-dark-primary:#333;
+  --btn-bg-light-secondary:#fff;
+  --btn-bg-hover-light-secondary:#e0dede;
+  --btn-bg-dark-secondary:#fff;
+
+  --btn-color-light-primary:#ffffff;
+  --btn-color-dark-primary:#fff;
+  --btn-color-light-secondary:#292929;
+  --btn-color-dark-secondary:#1900f7;
+}
+
+/* semantic color variables for this project */
+:root {
+  --color-background: var(--vt-c-white);
+  --color-background-soft: var(--vt-c-white-soft);
+  --color-background-mute: var(--vt-c-white-mute);
+
+  --color-border: var(--vt-c-divider-light-2);
+  --color-border-hover: var(--vt-c-divider-light-1);
+
+  --color-heading: var(--vt-c-text-light-1);
+  --color-text: var(--vt-c-text-light-1);
+
+  --btn-bg-color-primary: var(--btn-bg-light-primary);
+  --btn-bg-hover-color-primary: var(--btn-bg-hover-light-primary);
+  --btn-text-color-primary: var(--btn-color-dark-primary);
+  --btn-bg-color-secondary: var(--btn-bg-light-secondary);
+  --btn-bg-hover-color-secondary: var(--btn-bg-hover-light-secondary);
+
+  --section-gap: 160px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: var(--vt-c-black);
+    --color-background-soft: var(--vt-c-black-soft);
+    --color-background-mute: var(--vt-c-black-mute);
+
+    --color-border: var(--vt-c-divider-dark-2);
+    --color-border-hover: var(--vt-c-divider-dark-1);
+
+    --color-heading: var(--vt-c-text-dark-1);
+    --color-text: var(--vt-c-text-dark-2);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+html{
+  font-size: 62.5%;
+}
+a {
+  text-decoration: none;
+}
+b{
+  font-weight: bold;
+}
+body {
+
+  font-size: 1.6rem;
+  min-height: 100vh;
+  color: var(--color-text);
+  background-color: var(--color-background);
+  background-image: url(/src/assets/img/noise-light.png);
+  transition:
+    color 0.5s,
+    background-color 0.5s;
+  line-height: 1.6;
+  font-family:
+    Quicksand,
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* Dark theme overrides */
+.dark-theme {
+  background-color: var(--vt-c-black);
+  color: var(--color-text);
+
+  --btn-bg-color-primary: var(--btn-bg-dark-primary);
+  --btn-bg-hover-color-primary: var(--btn-bg-dark-primary);
+  --btn-text-color-primary: var(--btn-color-dark-primary);
+}
