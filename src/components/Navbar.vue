@@ -5,9 +5,6 @@
 
 <template>
 <header class="header">
-    <div class="header__avatar">
-        <img class="header__avatar-img" src="@/assets/img/avatar.jpg" alt="User Avatar">
-    </div>
     <nav class="header__navbar">
         <RouterLink class="header__navbar-item header__navbar-item--active" to="/">Home</RouterLink>
         <RouterLink class="header__navbar-item" to="/about">About</RouterLink>
@@ -21,10 +18,18 @@
     .header{
         display: flex;
         gap: 1rem;
-        padding: 0.8rem 1.6rem;
+        padding: 1.6rem 2.4rem;
+        background: #fff;
+        border-radius: 24px;
+        position: absolute;
+        bottom: 24px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: max-content;
     }
     .header__navbar {
         display: flex;
+        justify-content: center;
         align-items: center;
         font-family: 'Quicksand', sans-serif;
         gap: 2.4rem;
@@ -41,7 +46,7 @@
         color: #7d7d7d;
     }
     .header__navbar-item:visited{
-        color: #ffffff;
+        color: black;
     }
     
 </style>

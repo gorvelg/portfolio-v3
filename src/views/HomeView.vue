@@ -2,13 +2,14 @@
   import Button from '@/components/Button.vue';
   import IconGithub from '@/components/icons/IconGithub.vue';
   import IconLinkedin from '@/components/icons/IconLinkedin.vue';
+  import IconMail from '@/components/icons/IconMail.vue';
 </script>
 
 <template>
   <main>
     <div class="home">
-      <div>
-        <img class="home__image" src="@/assets/img/memoji.png" alt="guillaume gorvel photo">
+      <div class="home__image">
+        <img class="home__image__memoji" src="@/assets/img/memoji.png" alt="guillaume gorvel photo">
       </div>
       <div class="home__description">
         <h2 class="home__heading">
@@ -29,6 +30,9 @@
           <a href="https://www.linkedin.com/in/guillaume-gorvel-0510ab267/" target="_blank" rel="noopener noreferrer">
             <IconLinkedin />
           </a>
+          <a href="">
+            <IconMail />
+          </a>
         </div>
       </div>
     </div>
@@ -42,8 +46,15 @@
     flex-direction: column;
     gap: 1.6rem;
     align-items: center;
+    height: 100vh;
   }
   .home__image {
+    background: white;
+    border-radius: 50%;
+    border: 4px solid #b2a6e2;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px;
+  }
+  .home__image__memoji {
     border-radius: 50%;
     width: 200px;
   }
