@@ -8,7 +8,7 @@ import IconButton from '@/components/buttons/IconButton.vue';
     <div class="home__network">
         <IconButton iconName="Github" link="https://github.com/gorvelg" />
         <IconButton iconName="Linkedin" link="https://www.linkedin.com/in/guillaume-gorvel-0510ab267/" />
-        <IconButton iconName="Mail" />
+        <IconButton iconName="Mail" link="mailto:contact@guillaume-gorvel.fr" />
         </div>
 </template>
 <style scoped>
