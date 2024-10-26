@@ -1,4 +1,5 @@
 <script setup>
+import TechStack from '@/components/TechStack.vue';
 </script>
 
 <template>
@@ -9,10 +10,19 @@
     Au cours de cette expérience, j'ai eu l'occasion de renforcer mes compétences dans divers domaines, notamment le développement sur <b>Magento</b> et <b>Symfony</b>, ainsi que la gestion de bases de données.
   </p>
   <h2>Tech Stacks</h2>
+  <div class="techstack__group">
+    <TechStack title="Langages" :techStack="['Html','Css', 'Javascript', 'Php', 'Scss']" />
+    <TechStack title="Framework & CMS" :techStack="['Symfony','VueJS', 'Magento', 'Wordpress']" />
+    <TechStack title="Outils" :techStack="['Bootstrap','TailwindCSS']" />
+  </div>
   </main>
 </template>
 <style scoped>
   p {
     margin-bottom: 1.6rem;
+  }
+  .techstack__group {
+    display: flex;
+    gap: 3.2rem;
   }
 </style>

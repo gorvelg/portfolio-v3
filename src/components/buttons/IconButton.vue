@@ -7,9 +7,17 @@ const props = defineProps({
     type: String,
     required: true
   },
+  isLinked: {
+    type: Boolean,
+    default: true
+  },
   link: {
     type: String,
-    default: '#'
+  
+  },
+  size: {
+    type: String,
+    default: '2.4rem'
   }
 });
 
@@ -26,9 +34,15 @@ const IconComponent = computed(() => {
 
 <template>
   <div class="icon-btn">
-    <a class="icon-btn__link" :href="link" target="_blank" rel="noopener noreferrer">
+    
+     <span v-if="!isLinked" class="icon-btn__link" :style="{fontSize: size}">
+       <component :is="IconComponent" v-if="IconComponent && !isLinked" />
+     </span>
+    
+    <a v-if="isLinked" :href="link" target="_blank" rel="noopener noreferrer" class="icon-btn__link" :style="{fontSize: size}">
       <component :is="IconComponent" v-if="IconComponent" />
     </a>
+    
     <div class="icon-tooltip">
       {{ iconName }}
     </div>
@@ -41,11 +55,13 @@ const IconComponent = computed(() => {
   display: inline-block;
 }
 .icon-btn__link {
-  font-size: 2.4rem;
   display: inline-block;
 }
 .icon-tooltip {
   font-weight: 400;
+  text-transform: none;
+  letter-spacing: normal;
+  font-size: 1.6rem;
   padding: 0.25rem 1rem;
   background-color: #262626;
   border-color: #404040;
@@ -63,16 +79,16 @@ const IconComponent = computed(() => {
   transition: opacity 0.2s ease, visibility 0.2s ease;
 }
 .icon-tooltip::before {
-    content: '';
-    border-style: solid;
-    border-right: 8px solid transparent;
-    border-left: 8px solid transparent;
-    border-top: 10px solid #262626;
-    border-bottom: 0;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    position: absolute;
+  content: '';
+  border-style: solid;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+  border-top: 10px solid #262626;
+  border-bottom: 0;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
 }
 .icon-btn:hover .icon-tooltip {
   visibility: visible;
