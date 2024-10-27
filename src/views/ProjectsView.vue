@@ -5,15 +5,18 @@ import Project from '@/components/Project.vue';
 const projects = [
   {
     title: 'Ducky Driver',
-    desc: 'Description du projet 1'
+    desc: 'Description du projet 1',
+    thumbnail: 'https://via.placeholder.com/150'
   },
   {
     title: 'Projet 2',
-    desc: 'Description du projet 2'
+    desc: 'Description du projet 2',
+    thumbnail: 'https://via.placeholder.com/150'
   },
   {
     title: 'Projet 3',
-    desc: 'Description du projet 3'
+    desc: 'Description du projet 3',
+    thumbnail: 'https://via.placeholder.com/150'
   }
 ];
 

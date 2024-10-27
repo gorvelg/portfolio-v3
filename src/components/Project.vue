@@ -10,7 +10,7 @@ const props = defineProps({
 <template>
      <div class="project" v-for="project in projects" :key="project">
       <div class="project__thumbnail">
-        <img src="" alt="">
+        <img :src="project.thumbnail" alt="">
       </div>
       <div class="project__list">
         <div class="project__item">
