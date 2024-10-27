@@ -31,6 +31,9 @@
   --btn-color-dark-primary:#fff;
   --btn-color-light-secondary:#292929;
   --btn-color-dark-secondary:#1900f7;
+
+  --icon-color-light: #222;
+  --icon-color-dark: #fff;
 }
 
 /* semantic color variables for this project */
@@ -50,6 +53,9 @@
   --btn-text-color-primary: var(--btn-color-dark-primary);
   --btn-bg-color-secondary: var(--btn-bg-light-secondary);
   --btn-bg-hover-color-secondary: var(--btn-bg-hover-light-secondary);
+
+  --icon-fill-light: var(--icon-color-light);
+  --icon-fill-dark: var(--icon-color-dark);
 
   --section-gap: 160px;
 }

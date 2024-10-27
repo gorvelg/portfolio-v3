@@ -21,11 +21,13 @@
         padding: 1.6rem 2.4rem;
         background: #fff;
         border-radius: 24px;
-        position: absolute;
+        position: fixed;
         bottom: 24px;
         left: 50%;
         transform: translateX(-50%);
         width: max-content;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px;
+        z-index: 99;
     }
     .header__navbar {
         display: flex;

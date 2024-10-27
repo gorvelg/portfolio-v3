@@ -26,10 +26,12 @@ const loadIconComponent = (iconName) => {
 
 <template>
     <div class="tech-stack">
-        <div class="tech-stack__title">{{ title }}</div>
-        <div class="tech-stack__list">
-            <div v-for="item in techStack" :key="item">
-                <IconButton :iconName="item" :isLinked="false" size="4.0rem"/>
+        <div class="tech-stack__border">
+            <div class="tech-stack__title">{{ title }}</div>
+            <div class="tech-stack__list">
+                <div v-for="item in techStack" :key="item">
+                    <IconButton :iconName="item" :isLinked="false" size="4.0rem"/>
+                </div>
             </div>
         </div>
     </div>
@@ -40,15 +42,21 @@ const loadIconComponent = (iconName) => {
     display: flex;
     flex-direction: column;
     width: max-content;
-    background: grey;
+    background: linear-gradient(135deg, #b2a6e2, white);
     flex-wrap: wrap;
     border-radius: 12px;
-    padding: 3.2rem;
+    padding: .4rem;
     text-transform: uppercase;
     letter-spacing: 2px;
 
 }
+.tech-stack__border{
+    background: white;
+    border-radius: 12px;
+    padding: 2.4rem;
+}
 .tech-stack__title {
+    color: #222;
     font-size: 1.6rem;
     font-weight: bold;
     margin-bottom: 1.6rem;
