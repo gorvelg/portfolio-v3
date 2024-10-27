@@ -44,12 +44,12 @@ import Heading from '@/components/Heading.vue';
     border-radius: 12px;
     padding: 4px;
     position: relative;
-    overflow: hidden;
     transition: cubic-bezier(.175,.885,.32,1.275) .5s;
   }
   .about::before{
     content: "";
     position: absolute;
+    border-radius: 12px;
     top: 0;
     left: 0;
     width: 100%;
