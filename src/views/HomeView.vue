@@ -29,19 +29,39 @@
   </main>
 </template>
 <style scoped>
+
   .home {
     display: flex;
     flex-direction: column;
     gap: 1.6rem;
     align-items: center;
-    height: 100vh;
+    min-height: calc(100vh - 100px);
   }
-  .home__image {
+  /* .home__image {
     background: linear-gradient(135deg, #b2a6e2, white);
     padding: 4px;
     border-radius: 50%;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px;
-  }
+  } */
+  .home__image {
+    border-radius: 50%;
+    padding: 4px;
+    position: relative;
+    overflow: hidden;
+    transition: cubic-bezier(.175,.885,.32,1.275) .5s;
+}
+  .home__image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(60deg, #d11af5, #fff700, #07a3ff, #ff0000, #fdfdfd);
+    background-size: 300% 300%;
+    animation: gradient 5s ease infinite;
+}
   .home__image__memoji {
     display: block;
     border-radius: 50%;

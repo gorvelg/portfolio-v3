@@ -95,8 +95,8 @@ body {
   font-size: 1.6rem;
   min-height: 100vh;
   color: var(--color-text);
-  background-color: var(--color-background);
-  background-image: url(/src/assets/img/noise-light.png);
+  /* background-color: var(--color-background);
+  background-image: url(/src/assets/img/noise-light.png); */
   transition:
     color 0.5s,
     background-color 0.5s;

@@ -1,10 +1,12 @@
 <script setup>
 import TechStack from '@/components/TechStack.vue';
+import Heading from '@/components/Heading.vue';
 </script>
 
 <template>
   <main>
-    <h1 class="heading">À propos</h1>
+    <Heading title="À propos" subtitle="qui suis-je ?"/>
+    
     <div class="about">
       <div class="about__text">
           <p>
@@ -16,7 +18,7 @@ import TechStack from '@/components/TechStack.vue';
       </div>
     </div>
   
-    <h2 class="heading">Tech Stacks</h2>
+    <Heading title="Compétences" subtitle="Tech Stacks"/>
     <div class="techstack__group">
       <TechStack title="Langages" :techStack="['Html','Css', 'Javascript', 'Php', 'Scss']" />
       <TechStack title="Framework & CMS" :techStack="['Symfony','VueJS', 'Magento', 'Wordpress']" />
@@ -32,20 +34,31 @@ import TechStack from '@/components/TechStack.vue';
     flex-direction: column;
     padding: 1rem;
   }
-
-  .heading {
-    margin: 2.4rem 0;
-    font-size: 3.2rem;
-    text-align: center;
-  }
+  
 
   .about {
-    background: linear-gradient(135deg, #b2a6e2, white);
+
     border-radius: 12px;
     padding: 0.4rem;
     margin-bottom: 2rem;
+    border-radius: 12px;
+    padding: 4px;
+    position: relative;
+    overflow: hidden;
+    transition: cubic-bezier(.175,.885,.32,1.275) .5s;
   }
-
+  .about::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(60deg, #d11af5, #fff700, #07a3ff, #ff0000, #fdfdfd);
+    background-size: 300% 300%;
+    animation: gradient 5s ease infinite;
+  }
   .about__text {
     background: #fff;
     border-radius: 12px;
@@ -87,7 +100,7 @@ import TechStack from '@/components/TechStack.vue';
       padding: 3rem;
     }
 
-    .heading {
+    .heading-title {
       text-align: left;
     }
 

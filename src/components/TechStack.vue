@@ -38,23 +38,36 @@ const loadIconComponent = (iconName) => {
 </template>
 
 <style scoped>
-.tech-stack {  
+
+ .tech-stack{
     display: flex;
     flex-direction: column;
     width: max-content;
-    background: linear-gradient(135deg, #b2a6e2, white);
     flex-wrap: wrap;
     border-radius: 12px;
-    padding: .4rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    padding: 4px;
+    position: relative;
+    overflow: hidden;
+    transition: cubic-bezier(.175,.885,.32,1.275) .5s;
+ }
 
-}
-.tech-stack__border{
+ .tech-stack::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(60deg, #d11af5, #fff700, #07a3ff, #ff0000, #fdfdfd);
+    background-size: 300% 300%;
+    animation: gradient 5s ease infinite;
+ }
+ .tech-stack__border{
     background: white;
     border-radius: 12px;
     padding: 2.4rem;
-}
+ }
 .tech-stack__title {
     color: #222;
     font-size: 1.6rem;

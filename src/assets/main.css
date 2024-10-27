@@ -1,5 +1,41 @@
 @import './base.css';
 
+@keyframes gradient{
+  0% {
+  background-position: 0% 50%;
+}
+50% {
+  background-position: 100% 50%;
+}
+100% {
+  background-position: 0% 50%;
+}
+}
+#app:before {
+  background: url(@/assets/img/noise.gif);
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-size: 400px 400px;
+  background-repeat: repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+  z-index: -1;
+}
+#app::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: linear-gradient(180deg, #6F51EE, white); */
+  background: linear-gradient(181deg, #6F51EE, #ffbfbf);
+  opacity: 0.85;
+  z-index: -1;
+}
 /* #app {
   max-width: 1280px;
   margin: 0 auto;
