@@ -13,7 +13,7 @@ import TechStack from '@/components/TechStack.vue';
   <div class="techstack__group">
     <TechStack title="Langages" :techStack="['Html','Css', 'Javascript', 'Php', 'Scss']" />
     <TechStack title="Framework & CMS" :techStack="['Symfony','VueJS', 'Magento', 'Wordpress']" />
-    <TechStack title="Outils" :techStack="['Bootstrap','TailwindCSS']" />
+    <TechStack title="Outils" :techStack="['Bootstrap','TailwindCSS', 'Git', 'Docker']" />
   </div>
   </main>
 </template>
