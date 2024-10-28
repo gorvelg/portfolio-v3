@@ -4,28 +4,28 @@ import Project from '@/components/Project.vue';
 
 const projects = [
   {
-    title: 'test',
-    desc: 'Description du projet 1',
+    title: 'Receipt Manager',
+    desc: 'Application de gestion de tickets de caisse',
     thumbnail: 'https://via.placeholder.com/150'
   },
   {
     title: 'Ducky Driver',
-    desc: 'Description du projet 1',
+    desc: 'Site de covoiturage pour étudiants',
     thumbnail: 'https://via.placeholder.com/150'
   },
   {
     title: 'La MMINUTERIE',
-    desc: 'Description du projet 2',
+    desc: 'Projet universitaire',
     thumbnail: 'https://guillaume-gorvel.fr/images/web-mminuterie.jpg'
   },
   {
     title: 'The Rolling Stones',
-    desc: 'Description du projet 3',
+    desc: 'Projet universitaire',
     thumbnail: 'https://guillaume-gorvel.fr/images/web-rs.jpg'
   },
   {
     title: 'La boîte de Christine',
-    desc: 'Description du projet 4',
+    desc: 'Site vitrine',
     thumbnail: 'https://via.placeholder.com/250'
   }
 ];
