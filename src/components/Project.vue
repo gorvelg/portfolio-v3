@@ -39,6 +39,18 @@ const hoveredIndex = ref(0); // Initialisez hoveredIndex avec 0 pour que le prem
 </template>
 
 <style scoped>
+.project__stack{
+  display: flex;
+  gap: 1.6rem;
+}
+.project__tech{
+  padding: 0.25rem 0.4rem;
+  background: grey;
+  font-size: 1.2rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+
+}
 /* Transition styles */
 .fade-enter-active, .fade-leave-active {
   transition: all 0.5s ease;

@@ -9,8 +9,8 @@ const projects = [
     desc: 'Application de gestion de tickets de caisse',
     thumbnail: 'https://via.placeholder.com/150',
     stack: [
-      'Symfony',
-      'TailwindCSS',
+      'symfony',
+      'tailwind',
       'test'
     ]
     ,
