@@ -11,7 +11,8 @@ const projects = [
     stack: [
       'symfony',
       'tailwind',
-      'test'
+      'twig',
+      'javascript'
     ]
     ,
   },
@@ -19,25 +20,52 @@ const projects = [
     title: 'Ducky Driver',
     date: 'Juin 2023',
     desc: 'Site de covoiturage pour étudiants',
-    thumbnail: 'https://guillaume-gorvel.fr/images/web-duckysdriver.png'
+    thumbnail: 'https://guillaume-gorvel.fr/images/web-duckysdriver.png',
+    stack: [
+      'php',
+      'html',
+      'css',
+      'javascript',
+    ]
+    ,
   },
   {
     title: 'La MMINUTERIE',
     date: 'Mars 2023',
     desc: 'Projet universitaire',
-    thumbnail: 'https://guillaume-gorvel.fr/images/web-mminuterie.jpg'
+    thumbnail: 'https://guillaume-gorvel.fr/images/web-mminuterie.jpg',
+    stack: [
+      'php',
+      'html',
+      'css',
+      'javascript',
+    ]
+    ,
   },
   {
     title: 'La boîte de Christine',
     date: 'Février 2023',
     desc: 'Site vitrine',
-    thumbnail: 'https://via.placeholder.com/250'
+    thumbnail: 'https://via.placeholder.com/250',
+    stack: [
+      'html',
+      'css',
+      'javascript',
+    ]
+    ,
   },
   {
     title: 'The Rolling Stones',
     date: 'Janvier 2023',
     desc: 'Projet universitaire',
-    thumbnail: 'https://guillaume-gorvel.fr/images/web-rs.jpg'
+    thumbnail: 'https://guillaume-gorvel.fr/images/web-rs.jpg',
+    stack: [
+      'php',
+      'html',
+      'css',
+      'jquery',
+    ]
+    ,
   },
 
 ];
@@ -47,7 +75,7 @@ const projects = [
 <template>
   <main>
     <Heading title="Projets" subtitle="Mes réalisations"/>
-   
+
     <div class="project">
       <Project :projects="projects"/>
     </div>
@@ -59,5 +87,5 @@ const projects = [
     flex-direction: column;
     padding: 1rem;
   }
- 
+
 </style>

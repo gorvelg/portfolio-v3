@@ -3,12 +3,25 @@ import { defineProps, ref } from 'vue';
 
 const props = defineProps({
   projects: {
-    type: Array, // Changez Object en Array pour v-for
+    type: Array,
     required: true,
   }
 });
 
-const hoveredIndex = ref(0); // Initialisez hoveredIndex avec 0 pour que le premier élément soit visible par défaut
+const hoveredIndex = ref(0);
+
+// Couleurs des techs
+const techColors = {
+  symfony: '#4d5b6b',
+  tailwind: '#38bdf8',
+  vuejs: '#42B782',
+  javascript: '#F5A907',
+  html: '#DB4B2E',
+  css: '#006CB5',
+  php: '#4D588E',
+  jquery: '#0865A6',
+  twig: '#84A21A',
+};
 </script>
 
 <template>
@@ -30,7 +43,14 @@ const hoveredIndex = ref(0); // Initialisez hoveredIndex avec 0 pour que le prem
           <h3 class="project__title">{{ project.title }}</h3>
           <p class="project__description">{{ project.desc }}</p>
           <div class="project__stack">
-            <span v-for="tech in project.stack" :key="tech" class="project__tech">{{ tech }}</span>
+            <span
+                v-for="tech in project.stack"
+                :key="tech"
+                class="project__tech"
+                :style="{ backgroundColor: techColors[tech] || 'grey' }"
+            >
+              {{ tech }}
+            </span>
           </div>
         </div>
       </div>
@@ -39,33 +59,29 @@ const hoveredIndex = ref(0); // Initialisez hoveredIndex avec 0 pour que le prem
 </template>
 
 <style scoped>
-.project__stack{
+.project__stack {
   display: flex;
   gap: 1.6rem;
 }
-.project__tech{
+.project__tech {
   padding: 0.25rem 0.4rem;
-  background: grey;
   font-size: 1.2rem;
   border-radius: 4px;
   text-transform: uppercase;
-
+  color: #fff;
 }
 /* Transition styles */
 .fade-enter-active, .fade-leave-active {
   transition: all 0.5s ease;
 }
-
 .fade-enter-from, .fade-leave-to {
   transform: translateX(30px);
   opacity: 0;
 }
-
 .project {
   position: relative;
   height: 50vh;
 }
-
 .project__thumbnail {
   width: 50%;
   position: absolute;
@@ -79,7 +95,6 @@ const hoveredIndex = ref(0); // Initialisez hoveredIndex avec 0 pour que le prem
   width: 100%;
   height: 100%;
 }
-
 .project__list {
   width: 50%;
   position: absolute;
@@ -87,8 +102,8 @@ const hoveredIndex = ref(0); // Initialisez hoveredIndex avec 0 pour que le prem
   bottom: 0;
   right: 0;
   padding-left: 2.4rem;
+  overflow: auto;
 }
-
 .project__item {
   border-bottom: 2px solid #fff;
   padding: 1.2rem;
