@@ -5,29 +5,35 @@ import Project from '@/components/Project.vue';
 const projects = [
   {
     title: 'Receipt Manager',
+    date: 'Juillet 2024',
     desc: 'Application de gestion de tickets de caisse',
     thumbnail: 'https://via.placeholder.com/150'
   },
   {
     title: 'Ducky Driver',
+    date: 'Juin 2023',
     desc: 'Site de covoiturage pour étudiants',
     thumbnail: 'https://via.placeholder.com/150'
   },
   {
     title: 'La MMINUTERIE',
+    date: 'Mars 2023',
     desc: 'Projet universitaire',
     thumbnail: 'https://guillaume-gorvel.fr/images/web-mminuterie.jpg'
   },
   {
+    title: 'La boîte de Christine',
+    date: 'Février 2023',
+    desc: 'Site vitrine',
+    thumbnail: 'https://via.placeholder.com/250'
+  },
+  {
     title: 'The Rolling Stones',
+    date: 'Janvier 2023',
     desc: 'Projet universitaire',
     thumbnail: 'https://guillaume-gorvel.fr/images/web-rs.jpg'
   },
-  {
-    title: 'La boîte de Christine',
-    desc: 'Site vitrine',
-    thumbnail: 'https://via.placeholder.com/250'
-  }
+
 ];
 
 </script>

@@ -12,25 +12,29 @@ const hoveredIndex = ref(null); // Variable pour suivre l'index du projet survol
 </script>
 
 <template>
-  <div class="project">
-    <div v-for="(project, index) in projects" :key="project.title" class="project__thumbnail">
-      <Transition name="fade">
-        <img v-if="hoveredIndex === index" :src="project.thumbnail" alt="Project Thumbnail" />
-      </Transition>
-    </div>
-    <div class="project__list">
-      <div
-          class="project__item"
-          v-for="(project, index) in projects"
-          :key="project.title"
-          @mouseenter="hoveredIndex = index"
+  <section class="container">
+    <div class="project">
+      <div v-for="(project, index) in projects" :key="project.title" class="project__thumbnail">
+        <Transition name="fade">
+          <img v-if="hoveredIndex === index" :src="project.thumbnail" alt="Project Thumbnail" />
+        </Transition>
+      </div>
+      <div class="project__list">
+        <div
+            class="project__item"
+            v-for="(project, index) in projects"
+            :key="project.title"
+            @mouseenter="hoveredIndex = index"
 
-      >
-        <h3 class="project__title">{{ project.title }}</h3>
-        <p class="project__description">{{ project.desc }}</p>
+        >
+          <span class="project__date">{{ project.date }}</span>
+          <h3 class="project__title">{{ project.title }}</h3>
+          <p class="project__description">{{ project.desc }}</p>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
+
 </template>
 
 <style scoped>
@@ -74,7 +78,11 @@ const hoveredIndex = ref(null); // Variable pour suivre l'index du projet survol
 
 .project__item {
   border-bottom: 2px solid #fff;
-  padding: 1.2rem 0
+  padding: 1.2rem;
+  transition: 250ms background ease-in-out;
+}
+.project__item:hover{
+  background: #00000012;
 }
 .project__title{
   font-weight: 600;
