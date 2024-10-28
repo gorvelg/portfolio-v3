@@ -11,12 +11,12 @@ const projects = [
   {
     title: 'Projet 2',
     desc: 'Description du projet 2',
-    thumbnail: 'https://via.placeholder.com/150'
+    thumbnail: 'https://via.placeholder.com/250'
   },
   {
     title: 'Projet 3',
     desc: 'Description du projet 3',
-    thumbnail: 'https://via.placeholder.com/150'
+    thumbnail: 'https://www.francaise-instrumentation.fr/media/catalog/product/cache/687c0d7ac17722a8fce4e61d0d8a7104/F/I/FIS250RHT-francaise-passive-sonde-passive.png'
   }
 ];
 
