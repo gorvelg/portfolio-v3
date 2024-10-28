@@ -4,19 +4,29 @@ import Project from '@/components/Project.vue';
 
 const projects = [
   {
+    title: 'test',
+    desc: 'Description du projet 1',
+    thumbnail: 'https://via.placeholder.com/150'
+  },
+  {
     title: 'Ducky Driver',
     desc: 'Description du projet 1',
     thumbnail: 'https://via.placeholder.com/150'
   },
   {
-    title: 'Projet 2',
+    title: 'La MMINUTERIE',
     desc: 'Description du projet 2',
-    thumbnail: 'https://via.placeholder.com/250'
+    thumbnail: 'https://guillaume-gorvel.fr/images/web-mminuterie.jpg'
   },
   {
-    title: 'Projet 3',
+    title: 'The Rolling Stones',
     desc: 'Description du projet 3',
-    thumbnail: 'https://www.francaise-instrumentation.fr/media/catalog/product/cache/687c0d7ac17722a8fce4e61d0d8a7104/F/I/FIS250RHT-francaise-passive-sonde-passive.png'
+    thumbnail: 'https://guillaume-gorvel.fr/images/web-rs.jpg'
+  },
+  {
+    title: 'La boîte de Christine',
+    desc: 'Description du projet 4',
+    thumbnail: 'https://via.placeholder.com/250'
   }
 ];
 

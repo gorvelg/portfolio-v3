@@ -36,10 +36,11 @@ const hoveredIndex = ref(null); // Variable pour suivre l'index du projet survol
 <style scoped>
 /* Transition styles */
 .fade-enter-active, .fade-leave-active {
-  transition: opacity 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .fade-enter-from, .fade-leave-to {
+  transform: translateX(30px);
   opacity: 0;
 }
 
@@ -73,5 +74,10 @@ const hoveredIndex = ref(null); // Variable pour suivre l'index du projet survol
 
 .project__item {
   border-bottom: 2px solid #fff;
+  padding: 1.2rem 0
+}
+.project__title{
+  font-weight: 600;
+  font-size: 2.4rem;
 }
 </style>
