@@ -102,8 +102,12 @@ const techColors = {
   bottom: 0;
   right: 0;
   padding-left: 2.4rem;
-  overflow: auto;
+  overflow-y: scroll;
+  scrollbar-color: #ffffff transparent;
+  scrollbar-width: thin;
 }
+
+
 .project__item {
   border-bottom: 2px solid #fff;
   padding: 1.2rem;
