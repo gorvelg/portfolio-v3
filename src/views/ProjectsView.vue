@@ -7,13 +7,19 @@ const projects = [
     title: 'Receipt Manager',
     date: 'Juillet 2024',
     desc: 'Application de gestion de tickets de caisse',
-    thumbnail: 'https://via.placeholder.com/150'
+    thumbnail: 'https://via.placeholder.com/150',
+    stack: [
+      'Symfony',
+      'TailwindCSS',
+      'test'
+    ]
+    ,
   },
   {
     title: 'Ducky Driver',
     date: 'Juin 2023',
     desc: 'Site de covoiturage pour étudiants',
-    thumbnail: 'https://via.placeholder.com/150'
+    thumbnail: 'https://guillaume-gorvel.fr/images/web-duckysdriver.png'
   },
   {
     title: 'La MMINUTERIE',

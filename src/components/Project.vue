@@ -8,7 +8,7 @@ const props = defineProps({
   }
 });
 
-const hoveredIndex = ref(null); // Variable pour suivre l'index du projet survolé
+const hoveredIndex = ref(0); // Initialisez hoveredIndex avec 0 pour que le premier élément soit visible par défaut
 </script>
 
 <template>
@@ -25,16 +25,17 @@ const hoveredIndex = ref(null); // Variable pour suivre l'index du projet survol
             v-for="(project, index) in projects"
             :key="project.title"
             @mouseenter="hoveredIndex = index"
-
         >
           <span class="project__date">{{ project.date }}</span>
           <h3 class="project__title">{{ project.title }}</h3>
           <p class="project__description">{{ project.desc }}</p>
+          <div class="project__stack">
+            <span v-for="tech in project.stack" :key="tech" class="project__tech">{{ tech }}</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
-
 </template>
 
 <style scoped>
@@ -61,7 +62,7 @@ const hoveredIndex = ref(null); // Variable pour suivre l'index du projet survol
   bottom: 0;
   overflow: hidden;
 }
-.project__thumbnail img{
+.project__thumbnail img {
   object-fit: cover;
   width: 100%;
   height: 100%;
@@ -81,10 +82,10 @@ const hoveredIndex = ref(null); // Variable pour suivre l'index du projet survol
   padding: 1.2rem;
   transition: 250ms background ease-in-out;
 }
-.project__item:hover{
+.project__item:hover {
   background: #00000012;
 }
-.project__title{
+.project__title {
   font-weight: 600;
   font-size: 2.4rem;
 }
