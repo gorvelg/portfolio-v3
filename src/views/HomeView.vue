@@ -34,6 +34,7 @@
     display: flex;
     flex-direction: column;
     gap: 1.6rem;
+    justify-content: center;
     align-items: center;
     min-height: calc(100vh - 100px);
   }

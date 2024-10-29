@@ -64,11 +64,13 @@ const techColors = {
   gap: 1.6rem;
 }
 .project__tech {
-  padding: 0.25rem 0.4rem;
+  padding: 0.25rem 0.8rem;
   font-size: 1.2rem;
-  border-radius: 4px;
-  text-transform: uppercase;
+  border-radius: 14px;
+  text-transform: capitalize;
   color: #fff;
+  font-weight: 700;
+  border: 1px solid #ffffff52;
 }
 /* Transition styles */
 .fade-enter-active, .fade-leave-active {
@@ -102,9 +104,22 @@ const techColors = {
   bottom: 0;
   right: 0;
   padding-left: 2.4rem;
+  padding-right: 1rem;
   overflow-y: scroll;
-  scrollbar-color: #ffffff transparent;
-  scrollbar-width: thin;
+}
+.project__list::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 3px;
+}
+.project__list::-webkit-scrollbar-thumb {
+  background-color: #ffffff;
+  border-radius: 3px;
+}
+
+.project__list::-webkit-scrollbar-track {
+  -webkit-box-shadow: 0 0 2px rgb(0 0 0 / 16%);
+  background-color: #f2f2f22e;
+  border-radius: 3px;
 }
 
 
