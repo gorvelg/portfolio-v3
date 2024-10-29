@@ -70,7 +70,7 @@ const techColors = {
   text-transform: capitalize;
   color: #fff;
   font-weight: 700;
-  border: 1px solid #ffffff52;
+  border: 2px solid #ffffff52;
 }
 /* Transition styles */
 .fade-enter-active, .fade-leave-active {
