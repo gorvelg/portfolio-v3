@@ -3,6 +3,7 @@ import Heading from '@/components/Heading.vue';
 import Project from '@/components/Project.vue';
 
 const projects = [
+
   {
     title: 'Receipt Manager',
     date: 'Juillet 2024',
@@ -10,8 +11,32 @@ const projects = [
     thumbnail: 'https://via.placeholder.com/150',
     stack: [
       'symfony',
-      'tailwind',
       'twig',
+      'tailwind',
+      'javascript'
+    ]
+    ,
+  },
+  {
+    title: 'SkyView',
+    date: 'Mai 2024',
+    desc: 'Application météo',
+    thumbnail: 'https://via.placeholder.com/150',
+    stack: [
+      'symfony',
+      'twig',
+    ]
+    ,
+  },
+  {
+    title: 'IUTask',
+    date: 'Janvier 2024',
+    desc: 'Application météo',
+    thumbnail: 'https://via.placeholder.com/150',
+    stack: [
+      'symfony',
+      'twig',
+      'tailwind',
       'javascript'
     ]
     ,
@@ -58,7 +83,7 @@ const projects = [
     title: 'The Rolling Stones',
     date: 'Janvier 2023',
     desc: 'Projet universitaire',
-    thumbnail: 'https://guillaume-gorvel.fr/images/web-rs.jpg',
+    thumbnail: 'https://images.radiox.co.uk/images/593796?width=1400&crop=1_1&signature=iwiZvWDpX4yqGqvqhD67waElIeI=',
     stack: [
       'php',
       'html',
