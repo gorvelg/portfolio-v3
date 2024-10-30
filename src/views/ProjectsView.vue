@@ -31,7 +31,7 @@ const projects = [
   {
     title: 'IUTask',
     date: 'Janvier 2024',
-    desc: 'Application météo',
+    desc: 'Application de gestion de devoir',
     thumbnail: 'https://via.placeholder.com/150',
     stack: [
       'symfony',

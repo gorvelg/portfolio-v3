@@ -40,7 +40,10 @@ const techColors = {
             @mouseenter="hoveredIndex = index"
         >
           <span class="project__date">{{ project.date }}</span>
-          <h3 class="project__title">{{ project.title }}</h3>
+          <div class="project__heading-selected">
+            <span class="project__heading__arrow">→</span>
+            <h3 class="project__heading__title">{{ project.title }}</h3>
+          </div>
           <p class="project__description">{{ project.desc }}</p>
           <div class="project__stack">
             <span
@@ -127,12 +130,25 @@ const techColors = {
   border-bottom: 2px solid #fff;
   padding: 1.2rem;
   transition: 250ms background ease-in-out;
+  overflow: hidden;
+  cursor: pointer;
 }
 .project__item:hover {
   background: #00000012;
 }
-.project__title {
-  font-weight: 600;
+
+.project__heading-selected{
   font-size: 2.4rem;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  transform: translateX(-32px);
+  transition: 250ms transform cubic-bezier(0, 0, 0, 1);
+}
+.project__heading__title {
+  font-weight: 600;
+}
+.project__item:hover .project__heading-selected{
+  transform: translateX(0px);
 }
 </style>
