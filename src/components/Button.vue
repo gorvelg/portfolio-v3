@@ -52,7 +52,7 @@ export default {
 }
 .btn--secondary{
   background-color: var(--btn-bg-color-secondary);
-  color: var(--btn-text-color-light-secondary);
+  color: var(--btn-text-color-secondary);
 }
 
 .btn--primary:hover {
