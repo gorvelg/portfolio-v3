@@ -16,5 +16,11 @@ import IconButton from '@/components/buttons/IconButton.vue';
         display: flex;
         gap: 1.6rem;
         margin-top: 24px;
+      justify-content: space-around;
+    }
+    @media (min-width: 724px) {
+      .home__network{
+        justify-content: flex-start;
+      }
     }
 </style>

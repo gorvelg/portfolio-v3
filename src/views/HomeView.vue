@@ -72,10 +72,11 @@
   .home__description {
     display: flex;
     flex-direction: column;
-    line-height: 54px;
+    //line-height: 54px;
+    gap: 1.6rem;
   }
   .home__heading {
-    font-size: 4.8rem;
+    font-size: 2.4rem;
     font-weight: 600;
     margin: 0;
   }
@@ -87,10 +88,17 @@
     display: flex;
     gap: 1.6rem;
   }
-  
-  @media (min-width: 1024px) {
+  @media (min-width: 724px) {
+    .home__heading {
+    font-size: 3.2rem;
+    }
     .home{
       flex-direction: row;
+    }
+  }
+  @media (min-width: 1024px) {
+    .home__heading{
+      font-size: 4.8rem;
     }
     
   }
