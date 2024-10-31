@@ -1,6 +1,6 @@
 <template>
     <div>
-      <div v-if="isDarkTheme">
+      <div v-if="isDarkTheme" class="toggle-btn">
           <IconSunny @click="toggleTheme" />
         </div>
         <div v-else>
@@ -11,7 +11,7 @@
   
   <script>
   import IconDarkMode from '@/components/icons/IconDarkMode.vue';
-  import IconSunny from '@/components/icons/IconSunny.vue'; // Adjust the path if necessary
+  import IconSunny from '@/components/icons/IconSunny.vue';
   
   export default {
     name: 'ThemeSwitcher',
@@ -42,6 +42,8 @@
   </script>
   
   <style scoped>
-  /* You can add custom styles if necessary */
+    .toggle-btn{
+      display: flex;
+    }
   </style>
   
