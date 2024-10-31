@@ -22,6 +22,10 @@
   --text-color-secondary-dark: #fff;
 
   /* Text-Color Links*/
+  /* Hover */
+  --text-color-hover-light: #6b6b6b;
+  --text-color-hover-dark: #c5c4c4;
+
   /* Active */
   --text-color-active-light: #000;
   --text-color-active-dark: #fff;
@@ -43,7 +47,11 @@
   --btn-bg-color-dark-secondary: #333;
   --btn-bg-hover-color-dark-secondary: #444;
   --btn-text-color-dark-secondary: #f2f2f2;
+
   /*-------------------------------------------*/
+  /* semantic color variables for this project */
+  /*-------------------------------------------*/
+
   /* Global */
   --bg-color-gradient-1: var(--bg-color-gradient-1-light);
   --bg-color-gradient-2: var(--bg-color-gradient-2-light);
@@ -65,6 +73,8 @@
   --btn-text-color-secondary:var(--btn-text-color-light-secondary);
 
   /* Text Color Link Light*/
+  /* Hover */
+  --hover-link-text-color: var(--text-color-hover-light);
   /* Active */
   --active-link-text-color: var(--text-color-active-light);
 
@@ -140,6 +150,8 @@ body {
   --btn-text-color-secondary: var(--btn-text-color-dark-secondary);
 
   /* Text Color Link Dark */
+  /* Hover */
+  --hover-link-text-color: var(--text-color-hover-dark);
   /* Active */
   --active-link-text-color: var(--text-color-active-dark);
 }

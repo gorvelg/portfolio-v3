@@ -81,7 +81,7 @@ onMounted(() => {
   cursor: pointer;
 }
 .header__navbar-item:hover {
-  color: #7d7d7d;
+  color: var(--hover-link-text-color);
 }
 .underline {
   position: absolute;
