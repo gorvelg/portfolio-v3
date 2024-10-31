@@ -121,6 +121,7 @@ const projects = [
 
     overflow: scroll;
     padding-bottom: 100px;
+    color: white;
   }
   .project {
     height: 100%;

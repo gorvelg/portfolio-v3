@@ -1,5 +1,12 @@
 :root {
   /* Global */
+  /* Background Gradient Light*/
+  --bg-color-gradient-1-light: #6F51EE;
+  --bg-color-gradient-2-light: #ffbfbf;
+  /* Background Gradient Dark*/
+  --bg-color-gradient-1-dark: #151313;
+  --bg-color-gradient-2-dark: #ededed;
+
   /* Background and Text color Primary Light */
   --bg-color-primary-light: #ffffff;
   --text-color-primary-light: #222222;
@@ -33,6 +40,9 @@
   --btn-text-color-dark-secondary: #f2f2f2;
   /*-------------------------------------------*/
   /* Global */
+  --bg-color-gradient-1: var(--bg-color-gradient-1-light);
+  --bg-color-gradient-2: var(--bg-color-gradient-2-light);
+
   --bg-color-primary: var(--bg-color-primary-light);
   --text-color-primary: var(--text-color-primary-light);
 
@@ -97,9 +107,13 @@ body {
 }
 /* Dark theme overrides */
 .dark-theme {
+
   background-color: var(--bg-color-primary-dark);
   color: var(--text-color-primary-dark);
   /* Global */
+  --bg-color-gradient-1: var(--bg-color-gradient-1-dark);
+  --bg-color-gradient-2: var(--bg-color-gradient-2-dark);
+
   --bg-color-primary: var(--bg-color-primary-dark);
   --text-color-primary: var(--text-color-primary-dark);
 
