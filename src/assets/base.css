@@ -1,77 +1,53 @@
-/* color palette from <https://github.com/vuejs/theme> */
 :root {
-  --vt-c-white: #6F51EE;
-  --vt-c-white-soft: #f8f8f8;
-  --vt-c-white-mute: #f2f2f2;
+  /* Global */
+  /* Background and Text color Primary Light */
+  --bg-color-primary-light: #ffffff;
+  --text-color-primary-light: #222222;
+  /* Background and Text color Primary Dark */
+  --bg-color-primary-dark: #121212;
+  --text-color-primary-dark: #eaeaea;
 
-  --vt-c-black: #292929;
-  --vt-c-black-soft: #222222;
-  --vt-c-black-mute: #282828;
+  /* Background and Text color Secondary Light */
+  --bg-color-secondary-light: #121212;
+  --text-color-secondary-light: #ffffff;
+  /* Background and Text color Secondary Dark */
+  --bg-color-secondary-dark: #121212 ;
+  --text-color-secondary-dark: #fff;
 
-  --vt-c-indigo: #ffffff;
+  /* Boutons */
+  /*Primary Light */
+  --btn-bg-color-light-primary: #ff3233;
+  --btn-bg-hover-color-light-primary: #f00000;
+  --btn-text-color-light-primary: #fff;
+  /* Primary Dark */
+  --btn-bg-color-dark-primary: #bb2124;
+  --btn-bg-hover-color-dark-primary: #a11a1c;
+  --btn-text-color-dark-primary: #ffffff;
+  /* Secondary Light */
+  --btn-bg-color-light-secondary: #fff ;
+  --btn-bg-hover-color-light-secondary: #e0dede ;
+  --btn-text-color-light-secondary: #222;
+  /* Secondary Dark */
+  --btn-bg-color-dark-secondary: #333;
+  --btn-bg-hover-color-dark-secondary: #444;
+  --btn-text-color-dark-secondary: #f2f2f2;
+  /*-------------------------------------------*/
+  /* Global */
+  --bg-color-primary: var(--bg-color-primary-light);
+  --text-color-primary: var(--text-color-primary-light);
 
-  --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
-  --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
-  --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
-  --vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
+  --bg-color-secondary: var(--bg-color-secondary-light);
+  --text-color-secondary: var(--text-color-secondary-light);
 
-  --vt-c-text-light-1: var(--vt-c-indigo);
-  --vt-c-text-light-2: rgb(255, 255, 255);
-  --vt-c-text-dark-1: var(--vt-c-white);
-  --vt-c-text-dark-2: rgb(255, 255, 255);
-
-  --btn-bg-light-primary:#ff3233;
-  --btn-bg-hover-light-primary:#f00000;
-  --btn-bg-dark-primary:#333;
-  --btn-bg-light-secondary:#fff;
-  --btn-bg-hover-light-secondary:#e0dede;
-  --btn-bg-dark-secondary:#fff;
-
-  --btn-color-light-primary:#ffffff;
-  --btn-color-dark-primary:#fff;
-  --btn-color-light-secondary:#292929;
-  --btn-color-dark-secondary:#1900f7;
-
-  --icon-color-light: #222;
-  --icon-color-dark: #fff;
-}
-
-/* semantic color variables for this project */
-:root {
-  --color-background: var(--vt-c-white);
-  --color-background-soft: var(--vt-c-white-soft);
-  --color-background-mute: var(--vt-c-white-mute);
-
-  --color-border: var(--vt-c-divider-light-2);
-  --color-border-hover: var(--vt-c-divider-light-1);
-
-  --color-heading: var(--vt-c-text-light-1);
-  --color-text: var(--vt-c-text-light-1);
-
-  --btn-bg-color-primary: var(--btn-bg-light-primary);
-  --btn-bg-hover-color-primary: var(--btn-bg-hover-light-primary);
-  --btn-text-color-primary: var(--btn-color-dark-primary);
-  --btn-bg-color-secondary: var(--btn-bg-light-secondary);
-  --btn-bg-hover-color-secondary: var(--btn-bg-hover-light-secondary);
-
-  --icon-fill-light: var(--icon-color-light);
-  --icon-fill-dark: var(--icon-color-dark);
-
-  --section-gap: 160px;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-background: var(--vt-c-black);
-    --color-background-soft: var(--vt-c-black-soft);
-    --color-background-mute: var(--vt-c-black-mute);
-
-    --color-border: var(--vt-c-divider-dark-2);
-    --color-border-hover: var(--vt-c-divider-dark-1);
-
-    --color-heading: var(--vt-c-text-dark-1);
-    --color-text: var(--vt-c-text-dark-2);
-  }
+  /* Boutons */
+  /*Primary Light*/
+  --btn-bg-color-primary: var(--btn-bg-color-light-primary) ;
+  --btn-bg-hover-color-primary: var(--btn-bg-hover-color-light-primary);
+  --btn-text-color-primary: var(--btn-text-color-light-primary);
+  /*  Secondary Light */
+  --btn-bg-color-secondary: var(--btn-bg-color-light-secondary);
+  --btn-bg-hover-color-secondary: var(--btn-bg-hover-color-light-secondary);
+  --btn-text-color-secondary:var(--btn-text-color-light-secondary);
 }
 
 *,
@@ -94,37 +70,48 @@ body {
 
   font-size: 1.6rem;
   min-height: 100vh;
-  color: var(--color-text);
+  color: var(--text-color-primary-light);
   /* background-color: var(--color-background);
   background-image: url(/src/assets/img/noise-light.png); */
   transition:
-    color 0.5s,
-    background-color 0.5s;
+          color 0.5s,
+          background-color 0.5s;
   line-height: 1.6;
   font-family:
-    Quicksand,
-    Inter,
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
-    sans-serif;
+          Quicksand,
+          Inter,
+          -apple-system,
+          BlinkMacSystemFont,
+          'Segoe UI',
+          Roboto,
+          Oxygen,
+          Ubuntu,
+          Cantarell,
+          'Fira Sans',
+          'Droid Sans',
+          'Helvetica Neue',
+          sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 /* Dark theme overrides */
 .dark-theme {
-  background-color: var(--vt-c-black);
-  color: var(--color-text);
+  background-color: var(--bg-color-primary-dark);
+  color: var(--text-color-primary-dark);
+  /* Global */
+  --bg-color-primary: var(--bg-color-primary-dark);
+  --text-color-primary: var(--text-color-primary-dark);
 
-  --btn-bg-color-primary: var(--btn-bg-dark-primary);
-  --btn-bg-hover-color-primary: var(--btn-bg-dark-primary);
-  --btn-text-color-primary: var(--btn-color-dark-primary);
+  --bg-color-secondary: var(--bg-color-secondary-dark);
+  --text-color-secondary: var(--text-color-secondary-dark);
+  /*Boutons */
+  /*Primary Dark */
+  --btn-bg-color-primary: var(--btn-bg-color-dark-primary);
+  --btn-bg-hover-color-primary: var(--btn-bg-hover-color-dark-primary);
+  --btn-text-color-primary: var(--btn-text-color-dark-primary);
+/*  Secondary Dark */
+  --btn-bg-color-secondary: var(--btn-bg-color-dark-secondary);
+  --btn-bg-hover-color-secondary: var(--btn-bg-hover-color-dark-secondary);
+  --btn-text-color-secondary: var(--btn-text-color-dark-secondary);
 }

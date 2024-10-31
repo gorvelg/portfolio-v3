@@ -65,12 +65,12 @@ const loadIconComponent = (iconName) => {
     animation: gradient 5s ease infinite;
  }
  .tech-stack__border{
-    background: white;
+    background: var(--bg-color-primary);
     border-radius: 12px;
     padding: 2.4rem;
  }
 .tech-stack__title {
-    color: #222;
+    color: var(--text-color-primary);
     font-size: 1.6rem;
     font-weight: bold;
     margin-bottom: 1.6rem;

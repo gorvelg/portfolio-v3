@@ -60,13 +60,13 @@ import Heading from '@/components/Heading.vue';
     animation: gradient 5s ease infinite;
   }
   .about__text {
-    background: #fff;
+    background: var(--bg-color-primary);
     border-radius: 12px;
     padding: 1.6rem;
   }
 
   p {
-    color: #222;
+    color: var(--text-color-primary);
     margin-bottom: 1.6rem;
   }
 

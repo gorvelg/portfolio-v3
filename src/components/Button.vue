@@ -1,11 +1,9 @@
 <template>
-  <button
-    :class="['btn', buttonType, buttonSize]"
-    :disabled="disabled"
-    @click="handleClick"
+  <RouterLink
+    :class="['btn', buttonType, buttonSize]" :to="to"
   >
     <slot></slot>
-  </button>
+  </RouterLink>
 </template>
 
 <script>
@@ -20,10 +18,10 @@ export default {
       type: String,
       default: 'md', // 'sm', 'md', 'lg' for small, medium, large sizes
     },
-    disabled: {
-      type: Boolean,
-      default: false,
-    },
+    to: {
+      type: String,
+
+    }
   },
   computed: {
     buttonType() {
@@ -33,13 +31,7 @@ export default {
       return `btn--${this.size}`;
     },
   },
-  methods: {
-    handleClick(event) {
-      if (!this.disabled) {
-        this.$emit('click', event); // Emit a click event to parent
-      }
-    },
-  },
+
 };
 </script>
 
@@ -56,11 +48,11 @@ export default {
 }
 .btn--primary{
   background-color: var(--btn-bg-color-primary);
-  color: var(--btn-text-color);
+  color: var(--btn-text-color-primary);
 }
 .btn--secondary{
   background-color: var(--btn-bg-color-secondary);
-  color: var(--btn-text-color);
+  color: var(--btn-text-color-light-secondary);
 }
 
 .btn--primary:hover {
@@ -69,8 +61,5 @@ export default {
 .btn--secondary:hover {
   background-color: var(--btn-bg-hover-color-secondary);
 }
-.btn:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
-}
+
 </style>
