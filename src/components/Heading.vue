@@ -29,11 +29,11 @@ const props = defineProps({
     font-weight: 500;
     color: #ffffff;
     justify-content: center;
-    font-size: 30px;
+    font-size: 24px;
   }
   .heading-subtitle{
     width: 100%;
-    font-size: 40px;
+    font-size: 42px;
     position: absolute;
     left: 0;
     right: 0;
@@ -45,9 +45,23 @@ const props = defineProps({
     font-weight: 700;
     transform: translateY(-50%);
   }
+
+@media (min-width: 728px) {
+  .heading-title{
+    font-size: 4vw;
+  }
+  .heading-subtitle{
+    font-size: 7vw;
+  }
+}
 @media (min-width: 1024px){
+  .heading-title{
+    font-size: 30px;
+
+  }
   .heading-subtitle{
     font-size: 100px;
+
   }
 }
 

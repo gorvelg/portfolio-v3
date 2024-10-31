@@ -49,6 +49,7 @@ const loadIconComponent = (iconName) => {
     position: relative;
     overflow: hidden;
     transition: cubic-bezier(.175,.885,.32,1.275) .5s;
+    width: 100%;
  }
 
  .tech-stack::before{
@@ -77,6 +78,14 @@ const loadIconComponent = (iconName) => {
 .tech-stack__list {
     display: flex;
     gap: 1.6rem;
+    flex-wrap: wrap;
+  justify-content: space-around;
 }
+ @media (min-width: 768px) {
+  .tech-stack{
+    width: max-content;
+
+  }
+ }
 
 </style>

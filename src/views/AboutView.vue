@@ -32,7 +32,7 @@ import Heading from '@/components/Heading.vue';
   main {
     display: flex;
     flex-direction: column;
-    padding: 1rem;
+    padding: 0 1rem 100px;
   }
   
 
@@ -72,15 +72,13 @@ import Heading from '@/components/Heading.vue';
 
   .techstack__group {
     display: flex;
+    flex-wrap: wrap;
     overflow: auto;
     gap: 1.6rem;
   }
 
   /* Tablet styles */
   @media (min-width: 768px) {
-    main {
-      padding: 2rem;
-    }
 
     .about__text {
       padding: 2.4rem;
@@ -89,6 +87,7 @@ import Heading from '@/components/Heading.vue';
     .techstack__group {
       flex-direction: row;
       gap: 2.4rem;
+      justify-content: space-around;
     }
   }
 
