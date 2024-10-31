@@ -100,17 +100,39 @@ const projects = [
 <template>
   <main>
     <Heading title="Projets" subtitle="Mes réalisations"/>
-
-    <div class="project">
-      <Project :projects="projects"/>
-    </div>
+    <section class="container">
+      <div class="project">
+        <Project :projects="projects"/>
+      </div>
+    </section>
   </main>
 </template>
+
 <style scoped>
+
   main{
     display: flex;
     flex-direction: column;
     padding: 1rem;
+    height: 100vh;
+    overflow: hidden;
+  }
+  section.container {
+
+    overflow: scroll;
+    padding-bottom: 100px;
+  }
+  .project {
+    height: 100%;
+    position: relative;
+  }
+  @media screen and (min-width: 728px) {
+    section.container{
+      overflow: unset;
+    }
+    .project {
+      height: 50vh;
+    }
   }
 
 </style>

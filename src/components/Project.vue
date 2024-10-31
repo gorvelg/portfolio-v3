@@ -25,8 +25,6 @@ const techColors = {
 </script>
 
 <template>
-  <section class="container">
-    <div class="project">
       <div v-for="(project, index) in projects" :key="project.title" class="project__thumbnail">
         <Transition name="fade">
           <img v-if="hoveredIndex === index" :src="project.thumbnail" alt="Project Thumbnail" />
@@ -57,14 +55,16 @@ const techColors = {
           </div>
         </div>
       </div>
-    </div>
-  </section>
 </template>
 
 <style scoped>
+/* Styles de base pour mobiles */
+
+
 .project__stack {
   display: flex;
   gap: 1.6rem;
+  flex-wrap: wrap;
 }
 .project__tech {
   padding: 0.25rem 0.8rem;
@@ -83,49 +83,18 @@ const techColors = {
   transform: translateX(30px);
   opacity: 0;
 }
-.project {
-  position: relative;
-  height: 50vh;
-}
+
 .project__thumbnail {
-  width: 50%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  overflow: hidden;
-}
-.project__thumbnail img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
+  display: none;
 }
 .project__list {
-  width: 50%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  padding-left: 2.4rem;
+  width: 100%;
+  position: relative;
+  padding-left: 1rem;
   padding-right: 1rem;
-  overflow-y: scroll;
+  padding-bottom: 100px;
+  overflow-y: visible;
 }
-.project__list::-webkit-scrollbar {
-  width: 10px;
-  border-radius: 3px;
-}
-.project__list::-webkit-scrollbar-thumb {
-  background-color: #ffffff;
-  border-radius: 3px;
-}
-
-.project__list::-webkit-scrollbar-track {
-  -webkit-box-shadow: 0 0 2px rgb(0 0 0 / 16%);
-  background-color: #f2f2f22e;
-  border-radius: 3px;
-}
-
-
 .project__item {
   border-bottom: 2px solid #fff;
   padding: 1.2rem;
@@ -136,8 +105,7 @@ const techColors = {
 .project__item:hover {
   background: #00000012;
 }
-
-.project__heading-selected{
+.project__heading-selected {
   font-size: 2.4rem;
   display: flex;
   gap: 8px;
@@ -148,7 +116,55 @@ const techColors = {
 .project__heading__title {
   font-weight: 600;
 }
-.project__item:hover .project__heading-selected{
+.project__item:hover .project__heading-selected {
   transform: translateX(0px);
 }
+.project__stack {
+  margin-top: 0.8rem;
+}
+
+/* Styles pour écrans plus grands */
+@media screen and (min-width: 728px) {
+
+
+  .project__thumbnail {
+    width: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: block;
+  }
+  .project__thumbnail img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  .project__list {
+    width: 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    padding-left: 2.4rem;
+    padding-right: 1rem;
+    padding-bottom: 0;
+    overflow-y: scroll;
+  }
+  .project__list::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 3px;
+  }
+  .project__list::-webkit-scrollbar-thumb {
+    background-color: #ffffff;
+    border-radius: 3px;
+  }
+  .project__list::-webkit-scrollbar-track {
+    -webkit-box-shadow: 0 0 2px rgb(0 0 0 / 16%);
+    background-color: #f2f2f22e;
+    border-radius: 3px;
+  }
+}
 </style>
+

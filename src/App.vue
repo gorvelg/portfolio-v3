@@ -14,7 +14,7 @@ import Navbar from './components/Navbar.vue';
 <style scoped>
   .wrapper {
     max-width: 100%;
-    margin: 0 auto 100px;
+    margin: 0 auto;
     padding: 0 1.6rem;
   }
   @media (min-width: 768px) {
