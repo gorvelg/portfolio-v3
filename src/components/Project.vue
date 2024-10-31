@@ -92,7 +92,6 @@ const techColors = {
   position: relative;
   padding-left: 1rem;
   padding-right: 1rem;
-  padding-bottom: 100px;
   overflow-y: visible;
 }
 .project__item {

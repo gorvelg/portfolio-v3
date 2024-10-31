@@ -116,6 +116,7 @@ const projects = [
     padding: 1rem;
     height: 100vh;
     overflow: hidden;
+    padding-bottom: 100px;
   }
   section.container {
 
