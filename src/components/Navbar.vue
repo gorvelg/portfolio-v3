@@ -19,7 +19,8 @@
         display: flex;
         gap: 1rem;
         padding: 1.6rem 2.4rem;
-        background: #fff;
+        background: var(--bg-color-primary);
+        color: var(--text-color-primary);
         border-radius: 24px;
         position: fixed;
         bottom: 24px;
@@ -42,13 +43,22 @@
     }
     .header__navbar-item {
         text-decoration: none;
+        color: var(--text-color-primary);
         
     }
     .header__navbar-item:hover {
         color: #7d7d7d;
     }
     .header__navbar-item:visited{
-        color: black;
+        color: inherit;
+    }
+
+    #app .router-link-active {
+      color: var(--active-link-text-color);
+      font-weight: 600;
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 4px;
     }
     
 </style>

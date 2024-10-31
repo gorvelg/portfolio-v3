@@ -11,15 +11,20 @@
   --bg-color-primary-light: #ffffff;
   --text-color-primary-light: #222222;
   /* Background and Text color Primary Dark */
-  --bg-color-primary-dark: #121212;
+  --bg-color-primary-dark: #222;
   --text-color-primary-dark: #eaeaea;
 
   /* Background and Text color Secondary Light */
-  --bg-color-secondary-light: #121212;
+  --bg-color-secondary-light: #222;
   --text-color-secondary-light: #ffffff;
   /* Background and Text color Secondary Dark */
-  --bg-color-secondary-dark: #121212 ;
+  --bg-color-secondary-dark: #222 ;
   --text-color-secondary-dark: #fff;
+
+  /* Text-Color Links*/
+  /* Active */
+  --text-color-active-light: #000;
+  --text-color-active-dark: #fff;
 
   /* Boutons */
   /*Primary Light */
@@ -58,6 +63,11 @@
   --btn-bg-color-secondary: var(--btn-bg-color-light-secondary);
   --btn-bg-hover-color-secondary: var(--btn-bg-hover-color-light-secondary);
   --btn-text-color-secondary:var(--btn-text-color-light-secondary);
+
+  /* Text Color Link Light*/
+  /* Active */
+  --active-link-text-color: var(--text-color-active-light);
+
 }
 
 *,
@@ -128,4 +138,8 @@ body {
   --btn-bg-color-secondary: var(--btn-bg-color-dark-secondary);
   --btn-bg-hover-color-secondary: var(--btn-bg-hover-color-dark-secondary);
   --btn-text-color-secondary: var(--btn-text-color-dark-secondary);
+
+  /* Text Color Link Dark */
+  /* Active */
+  --active-link-text-color: var(--text-color-active-dark);
 }

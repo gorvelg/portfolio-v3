@@ -63,6 +63,7 @@
 }
   .home__image__memoji {
     display: block;
+    user-select: none;
     border-radius: 50%;
     width: 200px;
     background: white; 
