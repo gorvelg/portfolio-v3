@@ -1,12 +1,7 @@
 <script setup>
 import { defineProps, ref } from 'vue';
+import { projects } from '@/data/data.js';
 
-const props = defineProps({
-  projects: {
-    type: Array,
-    required: true,
-  }
-});
 
 const hoveredIndex = ref(0);
 
@@ -21,6 +16,7 @@ const techColors = {
   php: '#4D588E',
   jquery: '#0865A6',
   twig: '#84A21A',
+  magento: '#ff9d3d',
 };
 </script>
 
@@ -37,7 +33,8 @@ const techColors = {
             :key="project.title"
             @mouseenter="hoveredIndex = index"
         >
-          <span class="project__date">{{ project.date }}</span>
+          <RouterLink class="project__link" :to="{ name: 'project', params:{ id: project.id } }">
+            <span class="project__date">{{ project.date }}</span>
           <div class="project__heading-selected">
             <span class="project__heading__arrow">→</span>
             <h3 class="project__heading__title">{{ project.title }}</h3>
@@ -53,6 +50,7 @@ const techColors = {
               {{ tech }}
             </span>
           </div>
+          </RouterLink>
         </div>
       </div>
 </template>
@@ -103,6 +101,9 @@ const techColors = {
 }
 .project__item:hover {
   background: #00000012;
+}
+.project__link{
+  color: #fff;
 }
 .project__heading-selected {
   font-size: 2.4rem;

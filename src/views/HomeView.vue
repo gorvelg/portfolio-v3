@@ -1,8 +1,5 @@
 <script setup>
-  import Button from '@/components/Button.vue';
-  import IconGithub from '@/components/icons/IconGithub.vue';
-  import IconLinkedin from '@/components/icons/IconLinkedin.vue';
-  import IconMail from '@/components/icons/IconMail.vue';
+  import Button from '@/components/buttons/Button.vue';
   import HomeNetwork from '@/components/Home/HomeNetwork.vue';
 </script>
 

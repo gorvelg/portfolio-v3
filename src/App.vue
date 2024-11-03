@@ -23,7 +23,7 @@ import Navbar from './components/Navbar.vue';
   }
   @media (min-width: 1024px) {
   .wrapper {
-    max-width: 1024px;
+    max-width: 1280px;
   }
 }
 }

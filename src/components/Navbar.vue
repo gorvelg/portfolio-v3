@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onMounted, nextTick } from 'vue';
-import DarkModeButton from './DarkModeButton.vue';
+import DarkModeButton from '@/components/buttons/DarkModeButton.vue';
 
 const activeLinkOffset = ref(0);
 const activeLinkWidth = ref(0);
@@ -29,17 +29,17 @@ onMounted(() => {
           class="header__navbar-item header__navbar-item--active"
           to="/"
           @click="updateUnderlinePosition"
-      >Home</RouterLink>
+      >Accueil</RouterLink>
       <RouterLink
           class="header__navbar-item"
           to="/about"
           @click="updateUnderlinePosition"
-      >About</RouterLink>
+      >À propos</RouterLink>
       <RouterLink
           class="header__navbar-item"
           to="/projects"
           @click="updateUnderlinePosition"
-      >Projects</RouterLink>
+      >Projets</RouterLink>
       <DarkModeButton />
       <div
           class="underline"
