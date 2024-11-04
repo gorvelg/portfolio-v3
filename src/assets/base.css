@@ -30,6 +30,10 @@
   --text-color-active-light: #000;
   --text-color-active-dark: #fff;
 
+  /* Inactive */
+  --text-color-inactive-light: #ccc;
+  --text-color-inactive-dark: #ccc;
+
   /* Boutons */
   /*Primary Light */
   --btn-bg-color-light-primary: #ff3233;
@@ -77,6 +81,8 @@
   --hover-link-text-color: var(--text-color-hover-light);
   /* Active */
   --active-link-text-color: var(--text-color-active-light);
+  /* Inactive */
+  --inactive-link-text-color: var(--text-color-inactive-light);
 
 }
 
@@ -154,4 +160,6 @@ body {
   --hover-link-text-color: var(--text-color-hover-dark);
   /* Active */
   --active-link-text-color: var(--text-color-active-dark);
+    /* Inactive */
+  --inactive-link-text-color: var(--text-color-inactive-dark);
 }

@@ -40,7 +40,8 @@
     border-bottom: 1px solid #ccc;
   }
   .tabs__header button {
-    color: #ccc;
+    color: var(--inactive-link-text-color);
+    fill: var(--inactive-link-text-color);
     display: flex;
     align-items: center;
     gap: 10px;
@@ -53,7 +54,8 @@
     position: relative;
   }
   .tabs__header button.active {
-    color: #222;
+    color: var(--text-color-primary);
+    fill: var(--text-color-primary);
   }
   .tabs__header button.active::after {
     width: 100%;
@@ -65,6 +67,9 @@
     background: linear-gradient(45deg, #b84de5, #7d41ff);
     transition: all 0.4s ease;
   }
+  svg.tab-icon path {
+    fill: inherit;
+}
   .tabs__content {
     padding-top: 1rem;
   }
