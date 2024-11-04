@@ -2,10 +2,14 @@
     <main class="main">
       <div v-if="project" class="project">
         <Heading :title="project.title" subtitle="Projet" />
-        <img class="project__img" :src="project.thumbnail" :alt="project.name" />
         <hr class="project__underline" />
   
-        <BorderedBox>
+        <BorderedBox class="project__content">
+            <div class="project__img__heading">
+                <img class="project__img" :src="project.thumbnail" :alt="project.name" />
+                <div class="project__img-overlay"></div>
+            </div>
+    
           <Tabs :tabs="tabs">
             <template #default="{ activeTab }">
               <div v-if="activeTab === 'Vue d\'ensemble'">
@@ -99,6 +103,7 @@
     max-width: 1080px;
     margin: auto;
   }
+
   .project {
     display: flex;
     flex-direction: column;
@@ -108,10 +113,31 @@
     border-style: none;
     border-top: 1.5px solid white;
   }
+  .project__img__heading{
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
   .project__img {
     width: 100%;
-    border-radius: 12px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
   }
+  .project__img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: linear-gradient(45deg, #aaa6bb, transparent);
+}
   .arrow__link {
     text-decoration: none;
     font-size: 2.4rem;
@@ -143,4 +169,10 @@
     transform: translateY(-50%);
   }
   </style>
-  
+  <style>
+.project__content .box__border {
+    padding: 100px 2.4rem 2.4rem;
+    position: relative;
+    overflow: hidden;
+}
+</style>
