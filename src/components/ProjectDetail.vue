@@ -4,22 +4,33 @@
         <Heading :title="project.title" subtitle="Projet" />
         <img class="project__img" :src="project.thumbnail" :alt="project.name" />
         <hr class="project__underline" />
+  
         <BorderedBox>
-        <div class="project__row">
-              <h2>Technologies utilisées</h2>
-              <ProjectStack :stack="project.stack" :techColors="techColors" />
-            </div>
-            <div class="project__content">
-              <h2>{{ project.title }}</h2>
-              <p>{{ project.date }}</p>
-              <p>{{ project.desc }}</p>
-            </div>
-      </BorderedBox>
+          <Tabs :tabs="tabs">
+            <template #default="{ activeTab }">
+              <div v-if="activeTab === 'Vue d\'ensemble'">
+                <p>{{ project.sections.overview }}</p>
+              </div>
+              <div v-else-if="activeTab === 'Détails'">
+                <p>{{ project.sections.details }}</p>
+              </div>
+              <div v-else-if="activeTab === 'Galerie'">
+                <div class="gallery">
+                  <img
+                    v-for="(image, index) in project.sections.gallery"
+                    :key="index"
+                    :src="image"
+                    alt="Gallery Image"
+                  />
+                </div>
+              </div>
+            </template>
+          </Tabs>
+        </BorderedBox>
       </div>
       <div v-else>
         <p>Aucun projet trouvé</p>
       </div>
-      
   
       <RouterLink
         v-if="previousProject !== null"
@@ -34,9 +45,8 @@
         class="arrow__link arrow__link--right"
       >
         →
-    </RouterLink>
+      </RouterLink>
     </main>
-
   </template>
   
   <script setup>
@@ -44,22 +54,24 @@
   import { ref, onMounted, watch } from 'vue';
   import { useRoute } from 'vue-router';
   import Heading from '@/components/Heading.vue';
-  import ProjectStack from '@/components/ProjectStack.vue';
   import BorderedBox from '@/components/BorderedBox.vue';
+  import Tabs from '@/components/Tabs.vue';
+  
+  // Importation des icônes
+  import IconList from '@/components/icons/IconList.vue';
+  import GalleryIcon from '@/components/icons/IconGallery.vue';
+    import IconOverview from '@/components/icons/IconOverview.vue';
   
   const route = useRoute();
   const project = ref(null);
-  const techColors = {
-    symfony: '#4d5b6b',
-    tailwind: '#38bdf8',
-    vuejs: '#42B782',
-    javascript: '#F5A907',
-    html: '#DB4B2E',
-    css: '#006CB5',
-    php: '#4D588E',
-    jquery: '#0865A6',
-    twig: '#84A21A',
-  };
+  const previousProject = ref(null);
+  const nextProject = ref(null);
+  
+  const tabs = [
+    { name: 'Vue d\'ensemble', icon: IconOverview },
+    { name: 'Détails', icon: IconList },
+    { name: 'Galerie', icon: GalleryIcon }
+  ];
   
   const updateProject = () => {
     const projectId = parseInt(route.params.id);
@@ -70,27 +82,15 @@
   
   const getPreviousProjectId = (id) => {
     const currentIndex = projects.findIndex((p) => p.id === id);
-    if (currentIndex > 0) {
-      return projects[currentIndex - 1].id;
-    }
-    return null;
+    return currentIndex > 0 ? projects[currentIndex - 1].id : null;
   };
   
   const getNextProjectId = (id) => {
     const currentIndex = projects.findIndex((p) => p.id === id);
-    if (currentIndex < projects.length - 1) {
-      return projects[currentIndex + 1].id;
-    }
-    return null;
+    return currentIndex < projects.length - 1 ? projects[currentIndex + 1].id : null;
   };
   
-  const previousProject = ref(null);
-  const nextProject = ref(null);
-  
-  onMounted(() => {
-    updateProject();
-  });
-  
+  onMounted(() => updateProject());
   watch(() => route.params.id, updateProject);
   </script>
   
@@ -99,33 +99,19 @@
     max-width: 1080px;
     margin: auto;
   }
-  
   .project {
     display: flex;
     flex-direction: column;
     gap: 16px;
   }
-  
   .project__underline {
     border-style: none;
     border-top: 1.5px solid white;
   }
-  
   .project__img {
     width: 100%;
     border-radius: 12px;
   }
-  
-  .project__row {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-  }
-  
-  .project__content {
-    margin-top: 1rem;
-  }
-  
   .arrow__link {
     text-decoration: none;
     font-size: 2.4rem;
@@ -143,17 +129,14 @@
     justify-content: center;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 5px 2px;
   }
-  
   .arrow__link:hover {
     color: var(--text-color-hover);
   }
-  
   .arrow__link--left {
     top: 50%;
     left: 24px;
     transform: translateY(-50%);
   }
-  
   .arrow__link--right {
     top: 50%;
     right: 24px;
