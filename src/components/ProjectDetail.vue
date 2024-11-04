@@ -4,32 +4,22 @@
         <Heading :title="project.title" subtitle="Projet" />
         <img class="project__img" :src="project.thumbnail" :alt="project.name" />
         <hr class="project__underline" />
-        <div class="project__infos">
-          <div class="project__infos-border">
-            <div class="project__row">
+        <BorderedBox>
+        <div class="project__row">
               <h2>Technologies utilisées</h2>
-              <div class="project__stack">
-                <span
-                  v-for="tech in project.stack"
-                  :key="tech"
-                  class="project__tech"
-                  :style="{ backgroundColor: techColors[tech] || 'grey' }"
-                >
-                  {{ tech }}
-                </span>
-              </div>
+              <ProjectStack :stack="project.stack" :techColors="techColors" />
             </div>
             <div class="project__content">
               <h2>{{ project.title }}</h2>
               <p>{{ project.date }}</p>
               <p>{{ project.desc }}</p>
             </div>
-          </div>
-        </div>
+      </BorderedBox>
       </div>
       <div v-else>
         <p>Aucun projet trouvé</p>
       </div>
+      
   
       <RouterLink
         v-if="previousProject !== null"
@@ -44,8 +34,9 @@
         class="arrow__link arrow__link--right"
       >
         →
-      </RouterLink>
+    </RouterLink>
     </main>
+
   </template>
   
   <script setup>
@@ -53,6 +44,8 @@
   import { ref, onMounted, watch } from 'vue';
   import { useRoute } from 'vue-router';
   import Heading from '@/components/Heading.vue';
+  import ProjectStack from '@/components/ProjectStack.vue';
+  import BorderedBox from '@/components/BorderedBox.vue';
   
   const route = useRoute();
   const project = ref(null);
@@ -123,52 +116,10 @@
     border-radius: 12px;
   }
   
-  .project__infos {
-    position: relative;
-    border-radius: 12px;
-    padding: 0.4rem;
-    overflow: hidden;
-  }
-  
-  .project__infos:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background: linear-gradient(60deg, #d11af5, #fff700, #07a3ff, #ff0000, #fdfdfd);
-    background-size: 300% 300%;
-    animation: gradient 5s ease infinite;
-  }
-  
-  .project__infos-border {
-    background: var(--bg-color-primary);
-    border-radius: 12px;
-    padding: 2.4rem;
-  }
-  
   .project__row {
     display: flex;
     align-items: center;
     gap: 16px;
-  }
-  
-  .project__stack {
-    display: flex;
-    gap: 1.6rem;
-    flex-wrap: wrap;
-  }
-  
-  .project__tech {
-    padding: 0.25rem 0.8rem;
-    font-size: 1.2rem;
-    border-radius: 14px;
-    text-transform: capitalize;
-    color: #fff;
-    font-weight: 700;
-    border: 2px solid #ffffff52;
   }
   
   .project__content {

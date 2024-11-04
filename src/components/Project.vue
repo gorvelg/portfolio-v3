@@ -1,7 +1,7 @@
 <script setup>
 import { defineProps, ref } from 'vue';
 import { projects } from '@/data/data.js';
-
+import ProjectStack from '@/components/ProjectStack.vue';
 
 const hoveredIndex = ref(0);
 
@@ -40,16 +40,7 @@ const techColors = {
             <h3 class="project__heading__title">{{ project.title }}</h3>
           </div>
           <p class="project__description">{{ project.desc }}</p>
-          <div class="project__stack">
-            <span
-                v-for="tech in project.stack"
-                :key="tech"
-                class="project__tech"
-                :style="{ backgroundColor: techColors[tech] || 'grey' }"
-            >
-              {{ tech }}
-            </span>
-          </div>
+          <ProjectStack :stack="project.stack" :techColors="techColors" />
           </RouterLink>
         </div>
       </div>
