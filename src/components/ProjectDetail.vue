@@ -6,7 +6,7 @@
   
         <BorderedBox class="project__content">
             <div class="project__img__heading">
-                <img class="project__img" :src="project.thumbnail" :alt="project.name" />
+                <img class="project__img" :src="project.sections.banner" :alt="project.name" />
                 <div class="project__img-overlay"></div>
             </div>
     

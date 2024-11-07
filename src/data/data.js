@@ -2,6 +2,17 @@ import thumbnailRollingStones from "@/assets/img/thumbnail-rs.jpg";
 import thumbnailRacontines from "@/assets/img/thumbnail-racontines.jpg";
 import thumbnailLaMminuterie from "@/assets/img/thumbnail-la-mminuterie.jpg";
 import thumbnailDuckyDriver from "@/assets/img/thumbnail-ducky-driver.jpg";
+import thumbnailIutask from "@/assets/img/thumbnail-iutask.jpg";
+import thumbnailSkyview from "@/assets/img/thumbnail-skyview.jpg";
+import thumbnailMpc from "@/assets/img/thumbnail-mpc.jpg";
+
+import bannerLaMminuterie from "@/assets/img/banner-la-mminuterie.jpg";
+import bannerDuckyDriver from "@/assets/img/banner-ducky-driver.jpg";
+import bannerRollingStones from "@/assets/img/banner-rs.jpg";
+import bannerRacontines from "@/assets/img/banner-racontines.jpg";
+import bannerIutask from "@/assets/img/banner-iutask.jpg";
+import bannerSkyview from "@/assets/img/banner-skyview.jpg";
+import bannerMpc from "@/assets/img/banner-mpc.jpg";
 
 export const projects = [
   {
@@ -30,9 +41,10 @@ export const projects = [
     title: "SkyView",
     date: "Mai 2024",
     desc: "Application météo",
-    thumbnail: "https://via.placeholder.com/150",
+    thumbnail: thumbnailSkyview,
     stack: ["symfony", "twig"],
     sections: {
+      banner: bannerSkyview,
       overview: "Ceci est une vue d'ensemble du projet SkyView.",
       details: `
         SkyView est une application météo qui permet de consulter les
@@ -50,9 +62,10 @@ export const projects = [
     title: "IUTask",
     date: "Janvier 2024",
     desc: "Application de gestion de devoir",
-    thumbnail: "https://via.placeholder.com/150",
+    thumbnail: thumbnailIutask,
     stack: ["symfony", "twig", "tailwind", "javascript"],
     sections: {
+      banner: bannerIutask,
       overview: "Ceci est une vue d'ensemble du projet IUTask.",
       details: `
         IUTask est une application conçue pour aider les étudiants
@@ -73,6 +86,7 @@ export const projects = [
     thumbnail: thumbnailDuckyDriver,
     stack: ["php", "html", "css", "javascript"],
     sections: {
+      banner: bannerDuckyDriver,
       overview: "Ceci est une vue d'ensemble du projet Ducky Driver.",
       details: `
         Ducky Driver est un site de covoiturage spécialement conçu
@@ -93,6 +107,7 @@ export const projects = [
     thumbnail: thumbnailLaMminuterie,
     stack: ["php", "html", "css", "javascript"],
     sections: {
+      banner: bannerLaMminuterie,
       overview: "Ceci est une vue d'ensemble du projet La MMINUTERIE.",
       details: `
         La MMINUTERIE est un projet universitaire mettant en avant
@@ -113,6 +128,7 @@ export const projects = [
     thumbnail: thumbnailRacontines,
     stack: ["html", "css", "javascript"],
     sections: {
+      banner: bannerRacontines,
       overview: "Ceci est une vue d'ensemble du site La boîte de Christine.",
       details: `
         La boîte de Christine est un site vitrine conçu pour présenter
@@ -133,6 +149,7 @@ export const projects = [
     thumbnail: thumbnailRollingStones,
     stack: ["php", "html", "css", "jquery"],
     sections: {
+      banner: bannerRollingStones,
       overview: "Ceci est une vue d'ensemble du projet The Rolling Stones.",
       details: `
         The Rolling Stones est un projet universitaire dédié à la
@@ -150,10 +167,10 @@ export const projects = [
     title: "Mesurez pas cher",
     date: "Novembre 2024",
     desc: "Refonte d'un site e-commerce",
-    thumbnail:
-      "https://images.radiox.co.uk/images/593796?width=1400&crop=1_1&signature=iwiZvWDpX4yqGqvqhD67waElIeI=",
+    thumbnail: thumbnailMpc,
     stack: ["magento"],
     sections: {
+      banner: bannerMpc,
       overview: "Ceci est une vue d'ensemble du projet Mesurez pas cher.",
       details: `
         Mesurez pas cher est une refonte complète d'un site e-commerce

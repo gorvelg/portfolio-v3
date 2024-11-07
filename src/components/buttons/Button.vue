@@ -42,7 +42,7 @@ export default {
   cursor: pointer;
   border: none;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px;
-  border-radius: 5px;
+  border-radius: 2.4rem;
   transition: background-color 0.3s ease;
   
 }
