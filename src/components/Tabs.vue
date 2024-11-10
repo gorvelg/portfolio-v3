@@ -26,7 +26,6 @@
     tabs: {
       type: Array,
       required: true,
-      // Exemple : [{ name: 'Vue d\'ensemble', icon: IconComponent }]
     }
   });
   
@@ -64,7 +63,7 @@
     height: 3px;
     bottom: -1px;
     left: 0;
-    background: linear-gradient(45deg, #b84de5, #7d41ff);
+    background: linear-gradient(45deg, #0090FF, #9bcaf0);
     transition: all 0.4s ease;
   }
   svg.tab-icon path {

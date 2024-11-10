@@ -20,8 +20,16 @@
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
-    background: linear-gradient(60deg, #d11af5, #fff700, #07a3ff, #ff0000, #fdfdfd);
+    z-index: 0;
+    background: linear-gradient(
+  60deg,
+  var(--bg-gradient-bordered-box-1),
+  var(--bg-gradient-bordered-box-2),
+  var(--bg-gradient-bordered-box-1),
+  var(--bg-gradient-bordered-box-2),
+  var(--bg-gradient-bordered-box-1)
+);
+
     background-size: 300% 300%;
     animation: gradient 5s ease infinite;
   }

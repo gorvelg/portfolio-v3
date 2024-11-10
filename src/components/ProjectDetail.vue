@@ -2,8 +2,6 @@
     <main class="main">
       <div v-if="project" class="project">
         <Heading :title="project.title" subtitle="Projet" />
-        <hr class="project__underline" />
-  
         <BorderedBox class="project__content">
             <div class="project__img__heading">
                 <img class="project__img" :src="project.sections.banner" :alt="project.name" />

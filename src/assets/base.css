@@ -6,6 +6,12 @@
   /* Background Gradient Dark*/
   --bg-color-gradient-1-dark: #0D1520;
   --bg-color-gradient-2-dark: #111927;
+  /* Background Gradient Bordered Box Light*/
+  --bg-color-gradient-1-bordered-box-light: #5EB1EF;
+  --bg-color-gradient-2-bordered-box-light: #c2e6ff;
+  /* Background Gradient Bordered Box Dark*/
+  --bg-color-gradient-1-bordered-box-dark: #2870BD;
+  --bg-color-gradient-2-bordered-box-dark: #205D9E;
   /* Text Gradient Light */
   --text-color-gradient-1-light: #0D74CE;
   --text-color-gradient-2-light: #70B8FF;
@@ -38,7 +44,7 @@
 
   /* Inactive */
   --text-color-inactive-light: #ccc;
-  --text-color-inactive-dark: #ccc;
+  --text-color-inactive-dark: #2f4d6b;
 
 /* Border and separators */
   --border-color-light: #8EC8F6;
@@ -77,6 +83,9 @@
 
   --text-color-gradient-1: var(--text-color-gradient-1-light);
   --text-color-gradient-2: var(--text-color-gradient-2-light);
+
+  --bg-gradient-bordered-box-1:var(--bg-color-gradient-1-bordered-box-light);
+  --bg-gradient-bordered-box-2:var(--bg-color-gradient-2-bordered-box-light);
 
   --bg-color-primary: var(--bg-color-primary-light);
   --text-color-primary: var(--text-color-primary-light);
@@ -163,6 +172,9 @@ body {
   /* Global */
   --bg-color-gradient-1: var(--bg-color-gradient-1-dark);
   --bg-color-gradient-2: var(--bg-color-gradient-2-dark);
+
+  --bg-gradient-bordered-box-1:var(--bg-color-gradient-1-bordered-box-dark);
+  --bg-gradient-bordered-box-2:var(--bg-color-gradient-2-bordered-box-dark);
 
   --text-color-gradient-1: var(--text-color-gradient-1-dark);
   --text-color-gradient-2: var(--text-color-gradient-2-dark);
