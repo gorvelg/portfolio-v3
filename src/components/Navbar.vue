@@ -83,6 +83,9 @@ onMounted(() => {
 .header__navbar-item:hover {
   color: var(--hover-link-text-color);
 }
+a.router-link-active.router-link-exact-active.header__navbar-item:hover {
+    color: var(--text-color-primary);
+}
 .underline {
   position: absolute;
   bottom: -4px;

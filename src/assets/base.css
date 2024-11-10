@@ -6,6 +6,12 @@
   /* Background Gradient Dark*/
   --bg-color-gradient-1-dark: #0D1520;
   --bg-color-gradient-2-dark: #111927;
+  /* Text Gradient Light */
+  --text-color-gradient-1-light: #0D74CE;
+  --text-color-gradient-2-light: #70B8FF;
+  /* Text Gradient Dark */
+  --text-color-gradient-1-dark: #c2e6ff;
+  --text-color-gradient-2-dark: #07a3ff;
 
   /* Background and Text color Primary Light */
   --bg-color-primary-light: #FBFDFF;
@@ -24,11 +30,11 @@
   /* Text-Color Links*/
   /* Hover */
   --text-color-hover-light: #113264;
-  --text-color-hover-dark: #c5c4c4;
+  --text-color-hover-dark: #c2e6ff;
 
   /* Active */
   --text-color-active-light: #5EB1EF;
-  --text-color-active-dark: #fff;
+  --text-color-active-dark: #2870BD;
 
   /* Inactive */
   --text-color-inactive-light: #ccc;
@@ -37,6 +43,9 @@
 /* Border and separators */
   --border-color-light: #8EC8F6;
   --border-color-dark: #205D9E;
+
+  --separator-color-light: #ACD8FC;
+  --separator-color-dark: #104D87;
 
   /* Boutons */
   /*Primary Light */
@@ -55,7 +64,9 @@
   --btn-bg-color-dark-secondary: #333;
   --btn-bg-hover-color-dark-secondary: #444;
   --btn-text-color-dark-secondary: #f2f2f2;
-
+  /* Hover background smooth */
+  --bg-hover-color-smooth-light: #c2e6ff30;
+  --bg-hover-color-smooth-dark: #00336240;
   /*-------------------------------------------*/
   /* semantic color variables for this project */
   /*-------------------------------------------*/
@@ -63,6 +74,9 @@
   /* Global */
   --bg-color-gradient-1: var(--bg-color-gradient-1-light);
   --bg-color-gradient-2: var(--bg-color-gradient-2-light);
+
+  --text-color-gradient-1: var(--text-color-gradient-1-light);
+  --text-color-gradient-2: var(--text-color-gradient-2-light);
 
   --bg-color-primary: var(--bg-color-primary-light);
   --text-color-primary: var(--text-color-primary-light);
@@ -80,8 +94,11 @@
   --btn-bg-hover-color-secondary: var(--btn-bg-hover-color-light-secondary);
   --btn-text-color-secondary:var(--btn-text-color-light-secondary);
 
+  --bg-hover-color-smooth:var(--bg-hover-color-smooth-light);
+
   /* Border Color */
   --border-color: var(--border-color-light);
+  --separator-color: var(--separator-color-light);
   
   /* Text Color Link Light*/
   /* Hover */
@@ -147,6 +164,9 @@ body {
   --bg-color-gradient-1: var(--bg-color-gradient-1-dark);
   --bg-color-gradient-2: var(--bg-color-gradient-2-dark);
 
+  --text-color-gradient-1: var(--text-color-gradient-1-dark);
+  --text-color-gradient-2: var(--text-color-gradient-2-dark);
+
   --bg-color-primary: var(--bg-color-primary-dark);
   --text-color-primary: var(--text-color-primary-dark);
 
@@ -161,6 +181,12 @@ body {
   --btn-bg-color-secondary: var(--btn-bg-color-dark-secondary);
   --btn-bg-hover-color-secondary: var(--btn-bg-hover-color-dark-secondary);
   --btn-text-color-secondary: var(--btn-text-color-dark-secondary);
+
+  --bg-hover-color-smooth:var(--bg-hover-color-smooth-dark);
+
+  /* Border Color */
+  --border-color: var(--border-color-dark);
+  --separator-color: var(--separator-color-dark);
 
   /* Text Color Link Dark */
   /* Hover */

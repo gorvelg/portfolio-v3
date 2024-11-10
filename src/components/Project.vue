@@ -84,14 +84,14 @@ const techColors = {
   overflow-y: visible;
 }
 .project__item {
-  border-bottom: 2px solid #fff;
+  border-bottom: 2px solid var(--separator-color);
   padding: 1.2rem;
   transition: 250ms background ease-in-out;
   overflow: hidden;
   cursor: pointer;
 }
 .project__item:hover {
-  background: #00000012;
+  background: var(--bg-hover-color-smooth);
 }
 .project__link{
   color: var(--text-color-primary);
@@ -148,7 +148,7 @@ const techColors = {
     border-radius: 3px;
   }
   .project__list::-webkit-scrollbar-thumb {
-    background-color: #ffffff;
+    background-color: var(--separator-color);
     border-radius: 3px;
   }
   .project__list::-webkit-scrollbar-track {
