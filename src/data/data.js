@@ -19,21 +19,24 @@ export const projects = [
     id: 1,
     title: "Receipt Manager",
     date: "Juillet 2024",
-    desc: "Application de gestion de tickets de caisse",
+    desc: "Receipt Manager est une application de gestion de tickets de caisse.",
     thumbnail: "https://via.placeholder.com/150",
     stack: ["symfony", "twig", "tailwind", "javascript"],
     sections: {
-      overview: "Ceci est une vue d'ensemble du projet Receipt Manager.",
+      overview:
+        "Receipt Manager est une application de gestion de tickets de caisse pour deux utilisateurs.",
       details: `
-        Voici une description détaillée du projet Receipt Manager.
-        Cette application permet aux utilisateurs de gérer facilement
+        Cette application permet à deux utilisateurs de gérer facilement
         leurs tickets de caisse, de les organiser par date et de générer
-        des rapports statistiques sur leurs dépenses.`,
+        des rapports statistiques sur leurs dépenses. 
+        Chaque mois, un mail est envoyé aux utilisateurs afin de savoir s'ils doivent remboursé ou être remboursé par l'autre utilisateur.`,
       gallery: [
         "https://via.placeholder.com/300",
         "https://via.placeholder.com/300",
         "https://via.placeholder.com/300",
       ],
+      website: "https://www.receiptmanager.com",
+      github: "https://github.com/gorvelg/receipt-manager",
     },
   },
   {
@@ -45,12 +48,14 @@ export const projects = [
     stack: ["symfony", "twig"],
     sections: {
       banner: bannerSkyview,
-      overview: "Ceci est une vue d'ensemble du projet SkyView.",
+      overview:
+        "Skyview est une application météo qui fournit des prévisions à l'aide d'une API.",
       details: `
-        SkyView est une application météo qui permet de consulter les
-        prévisions météorologiques précises en utilisant des données
-        fiables. Elle fournit des informations sur la température,
-        la pression atmosphérique, et bien plus.`,
+        <b>SkyView</b> est une application de météo développée pour un projet universitaire (SAÉ). L'application intègre un <b>système de gestion des utilisateurs</b> complet, avec inscription, connexion et réinitialisation de mot de passe, permettant à chacun de créer et de gérer son profil et ses préférences. Les utilisateurs peuvent <b>personnaliser l'affichage des données météo</b> et configurer des <b>alertes spécifiques</b> pour des conditions comme les tempêtes ou le gel.<br/>
+    
+        SkyView se distingue par l'<b>intégration sécurisée d'APIs externes</b>, garantissant des <b>données en temps réel</b> optimisées par un <b>système de mise en cache</b> pour réduire la charge sur les serveurs. Les utilisateurs non connectés ont accès à des <b>prévisions générales pour les grandes villes</b> et peuvent rechercher des conditions par nom de ville ou code postal via une interface de découverte. Cette interface incite à s’inscrire pour accéder à des <b>fonctionnalités étendues</b>.<br/>
+    
+        Les utilisateurs connectés bénéficient de la <b>gestion de lieux favoris</b> et de la <b>personnalisation des types de données affichées</b> (température, vent, etc.). L'interface permet de mettre à jour les informations de profil et de <b>gérer les alertes</b> facilement. <b>SkyView</b> propose ainsi une approche complète et fluide de la météo, alliant <b>personnalisation</b> et <b>précision</b>.`,
       gallery: [
         "https://via.placeholder.com/300",
         "https://via.placeholder.com/300",

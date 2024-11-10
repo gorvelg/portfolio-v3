@@ -27,7 +27,7 @@ const props = defineProps({
     font-family: 'Quicksand';
     text-transform: uppercase;
     font-weight: 500;
-    color: #ffffff;
+    color: var(--text-color-secondary);
     justify-content: center;
     font-size: 24px;
   }

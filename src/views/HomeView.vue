@@ -15,7 +15,7 @@
         </h2>
         <p class="home__text">Développeur Web Fullstack Junior</p>
         <div class="home__btn">
-          <Button type="secondary" size="md" to="/about">Voir plus...</Button>
+          <Button type="secondary" size="md" to="/projects">Voir plus...</Button>
           <Button type="primary" size="md" to="/about">Me contacter</Button>
         </div>
         <HomeNetwork />
@@ -68,19 +68,18 @@
   .home__description {
     display: flex;
     flex-direction: column;
-    //line-height: 54px;
     gap: 1.6rem;
   }
   .home__heading {
     font-size: 2.4rem;
     font-weight: 600;
     margin: 0;
-    color: #fff;
+    color: var(--text-color-secondary);
   }
   .home__text {
     font-size: 1.8rem;
     margin: 0;
-    color: white;
+    color: var(--text-color-primary);
   }
   .home__btn {
     display: flex;

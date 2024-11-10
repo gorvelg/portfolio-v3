@@ -5,10 +5,10 @@
     </svg>
 </template>
 <style scoped>
-.icon__svg {
-    fill: var(--btn-bg-color-secondary);
-}
-.icon__svg:hover {
-    fill: var(--btn-bg-hover-color-secondary);
-}
+ .icon__svg {
+        fill: var(--text-color-primary);
+   }
+   .icon__svg:hover {
+       fill: var(--btn-bg-hover-color-secondary);
+   }
 </style>

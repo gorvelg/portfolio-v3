@@ -64,7 +64,7 @@ onMounted(() => {
   width: max-content;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 5px 2px;
   z-index: 99;
-  outline: #ffffff52 2px solid;
+  outline: var(--border-color) 2px solid;
 }
 .header__navbar {
   display: flex;

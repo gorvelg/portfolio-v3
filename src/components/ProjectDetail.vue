@@ -14,9 +14,13 @@
             <template #default="{ activeTab }">
               <div v-if="activeTab === 'Vue d\'ensemble'">
                 <p>{{ project.sections.overview }}</p>
+                <div class="project__links">
+                  <Button v-if="project.sections.website" href :to="project.sections.website" type="primary" size="sm">Visiter le site</Button>
+                  <Button v-if="project.sections.github" href :to="project.sections.github" type="primary" size="sm">Voir le code</Button>
+                </div>
               </div>
               <div v-else-if="activeTab === 'Détails'">
-                <p>{{ project.sections.details }}</p>
+                <div v-html="project.sections.details"></div>
               </div>
               <div v-else-if="activeTab === 'Galerie'">
                 <div class="gallery">
@@ -60,11 +64,11 @@
   import Heading from '@/components/Heading.vue';
   import BorderedBox from '@/components/BorderedBox.vue';
   import Tabs from '@/components/Tabs.vue';
-  
+  import Button from '@/components/buttons/Button.vue';
   // Importation des icônes
   import IconList from '@/components/icons/IconList.vue';
   import GalleryIcon from '@/components/icons/IconGallery.vue';
-    import IconOverview from '@/components/icons/IconOverview.vue';
+  import IconOverview from '@/components/icons/IconOverview.vue';
   
   const route = useRoute();
   const project = ref(null);
@@ -137,6 +141,11 @@
     right: 0;
     height: 100px;
     background: linear-gradient(45deg, #aaa6bb, transparent);
+}
+.project__links{
+  display: flex;
+  gap: 1.6rem;
+  margin-top: 1.6rem;
 }
   .arrow__link {
     text-decoration: none;

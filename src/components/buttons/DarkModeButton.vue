@@ -3,8 +3,8 @@
       <div v-if="isDarkTheme" class="toggle-btn">
           <IconSunny @click="toggleTheme" />
         </div>
-        <div v-else>
-          <IconDarkMode @click="toggleTheme" />
+        <div v-else class="toggle-btn">
+          <IconDarkMode @click="toggleTheme"/>
       </div>
     </div>
   </template>

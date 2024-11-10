@@ -94,7 +94,7 @@ const techColors = {
   background: #00000012;
 }
 .project__link{
-  color: #fff;
+  color: var(--text-color-primary);
 }
 .project__heading-selected {
   font-size: 2.4rem;

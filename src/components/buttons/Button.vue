@@ -1,9 +1,12 @@
 <template>
-  <RouterLink
-    :class="['btn', buttonType, buttonSize]" :to="to"
+  <component
+    :is="href ? 'a' : 'RouterLink'"
+    :class="['btn', buttonType, buttonSize]"
+    :to="!href ? to : undefined"
+    :href="href ? to : undefined"
   >
     <slot></slot>
-  </RouterLink>
+  </component>
 </template>
 
 <script>
@@ -20,7 +23,11 @@ export default {
     },
     to: {
       type: String,
-
+      required: true, // Assurez-vous qu'une valeur est fournie pour l'attribut `to`
+    },
+    href: {
+      type: Boolean,
+      default: false, // Définit si le lien est externe ou interne
     }
   },
   computed: {
@@ -31,7 +38,6 @@ export default {
       return `btn--${this.size}`;
     },
   },
-
 };
 </script>
 
@@ -40,17 +46,17 @@ export default {
   padding: 10px 20px;
   font-size: 1.6rem;
   cursor: pointer;
-  border: none;
+  border: var(--border-color) 2px solid;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px;
   border-radius: 2.4rem;
   transition: background-color 0.3s ease;
-  
 }
-.btn--primary{
+
+.btn--primary {
   background-color: var(--btn-bg-color-primary);
   color: var(--btn-text-color-primary);
 }
-.btn--secondary{
+.btn--secondary {
   background-color: var(--btn-bg-color-secondary);
   color: var(--btn-text-color-secondary);
 }
@@ -61,5 +67,4 @@ export default {
 .btn--secondary:hover {
   background-color: var(--btn-bg-hover-color-secondary);
 }
-
 </style>

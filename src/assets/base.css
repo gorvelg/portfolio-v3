@@ -1,48 +1,52 @@
 :root {
   /* Global */
   /* Background Gradient Light*/
-  --bg-color-gradient-1-light: #6F51EE;
-  --bg-color-gradient-2-light: #ffbfbf;
+  --bg-color-gradient-1-light: #FBFDFF;
+  --bg-color-gradient-2-light: #F4FAFF;
   /* Background Gradient Dark*/
-  --bg-color-gradient-1-dark: #151313;
-  --bg-color-gradient-2-dark: #ededed;
+  --bg-color-gradient-1-dark: #0D1520;
+  --bg-color-gradient-2-dark: #111927;
 
   /* Background and Text color Primary Light */
-  --bg-color-primary-light: #ffffff;
-  --text-color-primary-light: #222222;
+  --bg-color-primary-light: #FBFDFF;
+  --text-color-primary-light: #0D74CE;
   /* Background and Text color Primary Dark */
-  --bg-color-primary-dark: #222;
-  --text-color-primary-dark: #eaeaea;
+  --bg-color-primary-dark: #0D1520;
+  --text-color-primary-dark: #70B8FF;
 
   /* Background and Text color Secondary Light */
   --bg-color-secondary-light: #222;
-  --text-color-secondary-light: #ffffff;
+  --text-color-secondary-light: #113264;
   /* Background and Text color Secondary Dark */
   --bg-color-secondary-dark: #222 ;
-  --text-color-secondary-dark: #fff;
+  --text-color-secondary-dark: #C2E6FF;
 
   /* Text-Color Links*/
   /* Hover */
-  --text-color-hover-light: #6b6b6b;
+  --text-color-hover-light: #113264;
   --text-color-hover-dark: #c5c4c4;
 
   /* Active */
-  --text-color-active-light: #000;
+  --text-color-active-light: #5EB1EF;
   --text-color-active-dark: #fff;
 
   /* Inactive */
   --text-color-inactive-light: #ccc;
   --text-color-inactive-dark: #ccc;
 
+/* Border and separators */
+  --border-color-light: #8EC8F6;
+  --border-color-dark: #205D9E;
+
   /* Boutons */
   /*Primary Light */
-  --btn-bg-color-light-primary: #ff3233;
-  --btn-bg-hover-color-light-primary: #f00000;
-  --btn-text-color-light-primary: #fff;
+  --btn-bg-color-light-primary: #E6F4FE;
+  --btn-bg-hover-color-light-primary: #D5EFFF;
+  --btn-text-color-light-primary: #0D74CE;
   /* Primary Dark */
-  --btn-bg-color-dark-primary: #bb2124;
-  --btn-bg-hover-color-dark-primary: #a11a1c;
-  --btn-text-color-dark-primary: #ffffff;
+  --btn-bg-color-dark-primary: #0D2847;
+  --btn-bg-hover-color-dark-primary: #003362;
+  --btn-text-color-dark-primary: #70B8FF;
   /* Secondary Light */
   --btn-bg-color-light-secondary: #fff ;
   --btn-bg-hover-color-light-secondary: #e0dede ;
@@ -76,6 +80,9 @@
   --btn-bg-hover-color-secondary: var(--btn-bg-hover-color-light-secondary);
   --btn-text-color-secondary:var(--btn-text-color-light-secondary);
 
+  /* Border Color */
+  --border-color: var(--border-color-light);
+  
   /* Text Color Link Light*/
   /* Hover */
   --hover-link-text-color: var(--text-color-hover-light);
