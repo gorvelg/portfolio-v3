@@ -64,11 +64,11 @@
   --btn-text-color-dark-primary: #70B8FF;
   /* Secondary Light */
   --btn-bg-color-light-secondary: #fff ;
-  --btn-bg-hover-color-light-secondary: #e0dede ;
+  --btn-bg-hover-color-light-secondary: #f7f7f7; ;
   --btn-text-color-light-secondary: #222;
   /* Secondary Dark */
   --btn-bg-color-dark-secondary: #333;
-  --btn-bg-hover-color-dark-secondary: #444;
+  --btn-bg-hover-color-dark-secondary: #3B9EFF;
   --btn-text-color-dark-secondary: #f2f2f2;
   /* Hover background smooth */
   --bg-hover-color-smooth-light: #c2e6ff30;

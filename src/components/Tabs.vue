@@ -36,7 +36,7 @@
   .tabs__header {
     display: flex;
     gap: 1rem;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid var(--inactive-link-text-color);
   }
   .tabs__header button {
     color: var(--inactive-link-text-color);
