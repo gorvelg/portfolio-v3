@@ -1,10 +1,13 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import Navbar from './components/Navbar.vue';
+import Sidebar from "@/components/Sidebar.vue";
 </script>
 
 <template>
-
+  <Sidebar>
+    <RouterLink to="/about">Mentions légales</RouterLink>
+    </Sidebar>
   <Navbar />
   <div class="wrapper">
     <RouterView />

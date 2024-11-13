@@ -105,7 +105,6 @@
     max-width: 1080px;
     margin: auto;
   }
-
   .project {
     display: flex;
     flex-direction: column;

@@ -49,17 +49,18 @@ export const projects = [
     sections: {
       banner: bannerSkyview,
       overview:
-        "Skyview est une application météo qui fournit des prévisions à l'aide d'une API.",
+        "Skyview est une application météo qui fournit des prévisions à l'aide d'une API. Les utilisateurs inscrits ont la possibilité de personnaliser l'affichage des données.",
       details: `
-        <b>SkyView</b> est une application de météo développée pour un projet universitaire (SAÉ). L'application intègre un <b>système de gestion des utilisateurs</b> complet, avec inscription, connexion et réinitialisation de mot de passe, permettant à chacun de créer et de gérer son profil et ses préférences. Les utilisateurs peuvent <b>personnaliser l'affichage des données météo</b> et configurer des <b>alertes spécifiques</b> pour des conditions comme les tempêtes ou le gel.<br/>
+        <b>SkyView</b> est une application de météo développée pour un projet universitaire (SAÉ). L'application intègre un <b>système de gestion des utilisateurs</b> complet, avec inscription, connexion et réinitialisation de mot de passe, permettant à chacun de créer et de gérer son profil et ses préférences. Les utilisateurs peuvent <b>personnaliser l'affichage des données météo</b> et configurer des <b>alertes spécifiques</b> pour des conditions comme les tempêtes ou le gel.<br/><br/>
     
-        SkyView se distingue par l'<b>intégration sécurisée d'APIs externes</b>, garantissant des <b>données en temps réel</b> optimisées par un <b>système de mise en cache</b> pour réduire la charge sur les serveurs. Les utilisateurs non connectés ont accès à des <b>prévisions générales pour les grandes villes</b> et peuvent rechercher des conditions par nom de ville ou code postal via une interface de découverte. Cette interface incite à s’inscrire pour accéder à des <b>fonctionnalités étendues</b>.<br/>
+        SkyView se distingue par l'<b>intégration sécurisée d'APIs externes</b>, garantissant des <b>données en temps réel</b> optimisées par un <b>système de mise en cache</b> pour réduire la charge sur les serveurs. Les utilisateurs non connectés ont accès à des <b>prévisions générales pour les grandes villes</b> et peuvent rechercher des conditions par nom de ville ou code postal via une interface de découverte. Cette interface incite à s’inscrire pour accéder à des <b>fonctionnalités étendues</b>.<br/><br/>
     
         Les utilisateurs connectés bénéficient de la <b>gestion de lieux favoris</b> et de la <b>personnalisation des types de données affichées</b> (température, vent, etc.). L'interface permet de mettre à jour les informations de profil et de <b>gérer les alertes</b> facilement. <b>SkyView</b> propose ainsi une approche complète et fluide de la météo, alliant <b>personnalisation</b> et <b>précision</b>.`,
       gallery: [
         "https://via.placeholder.com/300",
         "https://via.placeholder.com/300",
       ],
+      github: 'https://github.com/elisegrt/SAE_401',
     },
   },
   {
