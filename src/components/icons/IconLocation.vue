@@ -7,6 +7,6 @@
         fill: var(--text-color-primary);
    }
    .icon__svg:hover {
-       fill: var(--btn-bg-hover-color-secondary);
+       fill: var(--hover-link-text-color);
    }
 </style>
