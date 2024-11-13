@@ -177,16 +177,14 @@ export const projects = [
     stack: ["magento"],
     sections: {
       banner: bannerMpc,
-      overview: "Ceci est une vue d'ensemble du projet Mesurez pas cher.",
+      overview: "Durant mon alternance chez Distrame, j'ai été chargé d'effectuer une refonte complète du site e-commerce mesurezpascher.fr.",
       details: `
-        Mesurez pas cher est une refonte complète d'un site e-commerce
-        spécialisé dans les instruments de mesure. Le nouveau design
-        offre une meilleure expérience utilisateur et un processus
-        d'achat simplifié.`,
+        Après la refonte du site distrame.fr et de sa migration vers Magento (offrant des fonctionnalités de multi-boutique), j'ai été chargé de conduire la refonte complète du site Mesurez pas cher et de l'intégrer à cette nouvelle plateforme.<br><br> Ce projet m'a amené à développer et à implémenter plusieurs modules personnalisés pour répondre aux besoins spécifiques du site et optimiser l'expérience utilisateur.`,
       gallery: [
         "https://via.placeholder.com/300",
         "https://via.placeholder.com/300",
       ],
+      website: "https://mesurezpascher.fr",
     },
   },
 ];
