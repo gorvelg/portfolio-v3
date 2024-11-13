@@ -149,8 +149,9 @@
     font-size: 2.4rem;
     color: var(--text-color-primary);
     cursor: pointer;
-    background: white;
+    background: var(--btn-bg-color-primary);
     transition: color 0.3s;
+    border: 2px solid var(--border-color-selected);
     display: flex;
     font-weight: 600;
     position: absolute;
@@ -162,7 +163,8 @@
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 5px 2px;
   }
   .arrow__link:hover {
-    color: var(--text-color-hover);
+    color: var(--hover-link-text-color);
+    background: var(--btn-bg-hover-color-primary);
   }
   .arrow__link--left {
     top: 50%;
@@ -173,6 +175,11 @@
     top: 50%;
     right: 24px;
     transform: translateY(-50%);
+  }
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 24px;
   }
   </style>
   <style>

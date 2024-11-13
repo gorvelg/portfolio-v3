@@ -50,6 +50,9 @@
   --border-color-light: #8EC8F6;
   --border-color-dark: #205D9E;
 
+  --border-color-selected-light: #5EB1EF;
+  --border-color-selected-dark: #2870BD;
+
   --separator-color-light: #ACD8FC;
   --separator-color-dark: #104D87;
 
@@ -107,6 +110,7 @@
 
   /* Border Color */
   --border-color: var(--border-color-light);
+  --border-color-selected: var(--border-color-selected-light);
   --separator-color: var(--separator-color-light);
   
   /* Text Color Link Light*/
@@ -198,6 +202,7 @@ body {
 
   /* Border Color */
   --border-color: var(--border-color-dark);
+  --border-color-selected: var(--border-color-selected-dark);
   --separator-color: var(--separator-color-dark);
 
   /* Text Color Link Dark */

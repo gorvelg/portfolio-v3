@@ -82,6 +82,7 @@ export const projects = [
         "https://via.placeholder.com/300",
         "https://via.placeholder.com/300",
       ],
+      github: "https://github.com/BriqueAuBob/sae301"
     },
   },
   {
@@ -103,6 +104,8 @@ export const projects = [
         "https://via.placeholder.com/300",
         "https://via.placeholder.com/300",
       ],
+      github: "https://github.com/Rophyr/sae202",
+      website: "https://mmi22f01.sae202.ovh"
     },
   },
   {
@@ -124,6 +127,8 @@ export const projects = [
         "https://via.placeholder.com/300",
         "https://via.placeholder.com/300",
       ],
+      github: "https://github.com/gorvelg/sae203",
+      website: "https://mmi22f01.sae203.ovh"
     },
   },
   {
@@ -145,6 +150,8 @@ export const projects = [
         "https://via.placeholder.com/300",
         "https://via.placeholder.com/300",
       ],
+      github: "https://github.com/gorvelg/racontines",
+      website: "http://guillaume-gorvel.fr/racontines"
     },
   },
   {
