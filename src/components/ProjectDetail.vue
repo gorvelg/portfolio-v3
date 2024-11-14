@@ -137,7 +137,7 @@
     left: 0;
     right: 0;
     height: 100px;
-    background: linear-gradient(45deg, #aaa6bb, transparent);
+    background: linear-gradient(45deg, var(--bg-color-primary), var(--bg-color-opacity-primary));
 }
 .project__links{
   display: flex;
@@ -190,7 +190,7 @@
 }
 .tabs__content .heading-2 {
     font-weight: 700;
-    font-size: 3rem;
+    font-size: 2.4rem;
     width: max-content;
     margin-bottom: 2.5rem;
   }

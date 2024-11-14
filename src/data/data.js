@@ -184,13 +184,17 @@ export const projects = [
     stack: ["magento"],
     sections: {
       banner: bannerMpc,
-      overview: "Durant mon alternance chez Distrame, j'ai été chargé d'effectuer une refonte complète du site e-commerce mesurezpascher.fr.",
+      overview: "Après la refonte du site distrame.fr et de sa migration vers Magento (offrant des fonctionnalités de multi-boutique), j'ai été chargé de conduire la refonte complète du site Mesurez pas cher et de l'intégrer à cette nouvelle plateforme.",
       details: `
         <div class="heading-2">
-                        <i class="fa-solid fa-bullseye"></i>
-        Objectifs
+            <i class="fa-solid fa-bullseye"></i>
+            Objectifs
         </div>
-        Après la refonte du site distrame.fr et de sa migration vers Magento (offrant des fonctionnalités de multi-boutique), j'ai été chargé de conduire la refonte complète du site Mesurez pas cher et de l'intégrer à cette nouvelle plateforme.<br><br>
+        <ul>
+            <li>Effectuer la <b>migration vers Magento</b> (offrant des fonctionnalités de multi-boutique).</li>
+            <li>Création d'un nouveau thème.</li>
+            <li>Développement de <b>plusieurs modules</b> (fil d'Ariane sous forme de tag, pastilles promotionnelles).</li>
+        </ul><br>
          <div class="heading-2">
             <i class="fa-solid fa-stairs"></i>
         Challenge

@@ -33,6 +33,10 @@
   --bg-color-secondary-dark: #222 ;
   --text-color-secondary-dark: #C2E6FF;
 
+  /* Background for header with opacity */
+  --bg-color-opacity-primary-light: #fdfdfd47;
+  --bg-color-opacity-primary-dark: #0D152070;
+
   /* Text-Color Links*/
   /* Hover */
   --text-color-hover-light: #113264;
@@ -95,6 +99,8 @@
 
   --bg-color-secondary: var(--bg-color-secondary-light);
   --text-color-secondary: var(--text-color-secondary-light);
+
+  --bg-color-opacity-primary: var(--bg-color-opacity-primary-light);
 
   /* Boutons */
   /*Primary Light*/
@@ -188,6 +194,9 @@ body {
 
   --bg-color-secondary: var(--bg-color-secondary-dark);
   --text-color-secondary: var(--text-color-secondary-dark);
+
+  --bg-color-opacity-primary: var(--bg-color-opacity-primary-dark);
+
   /*Boutons */
   /*Primary Dark */
   --btn-bg-color-primary: var(--btn-bg-color-dark-primary);
