@@ -11,6 +11,10 @@
           <Tabs :tabs="tabs">
             <template #default="{ activeTab }">
               <div v-if="activeTab === 'Vue d\'ensemble'">
+                <div class="project__header">
+                  <h2>{{project.title}}</h2>
+                  <ProjectStack :stack="project.stack" :techColors="techColors" />
+                </div>
                 <p>{{ project.sections.overview }}</p>
                 <div class="project__links">
                   <Button v-if="project.sections.website" href :to="project.sections.website" type="primary" size="sm">Visiter le site</Button>
@@ -67,12 +71,26 @@
   import IconList from '@/components/icons/IconList.vue';
   import GalleryIcon from '@/components/icons/IconGallery.vue';
   import IconOverview from '@/components/icons/IconOverview.vue';
+  import ProjectStack from "@/components/ProjectStack.vue";
   
   const route = useRoute();
   const project = ref(null);
   const previousProject = ref(null);
   const nextProject = ref(null);
-  
+
+  const techColors = {
+    symfony: '#4d5b6b',
+    tailwind: '#38bdf8',
+    vuejs: '#42B782',
+    javascript: '#F5A907',
+    html: '#DB4B2E',
+    css: '#006CB5',
+    php: '#4D588E',
+    jquery: '#0865A6',
+    twig: '#84A21A',
+    magento: '#ff9d3d',
+  };
+
   const tabs = [
     { name: 'Vue d\'ensemble', icon: IconOverview },
     { name: 'Détails', icon: IconList },
@@ -138,12 +156,21 @@
     right: 0;
     height: 100px;
     background: linear-gradient(45deg, var(--bg-color-primary), var(--bg-color-opacity-primary));
-}
-.project__links{
+  }
+  .project__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .project__header h2{
+    color: var(--text-color-secondary);
+  }
+  .project__links{
   display: flex;
   gap: 1.6rem;
   margin-top: 1.6rem;
-}
+  }
+
   .arrow__link {
     text-decoration: none;
     font-size: 2.4rem;
