@@ -36,7 +36,7 @@ import BorderedBox from "@/components/BorderedBox.vue";
     flex-direction: column;
     padding: 0 1rem 100px;
   }
-  
+
 
   p {
     color: var(--text-color-primary);
@@ -53,10 +53,6 @@ import BorderedBox from "@/components/BorderedBox.vue";
   /* Tablet styles */
   @media (min-width: 768px) {
 
-    .about__text {
-      padding: 2.4rem;
-    }
-
     .techstack__group {
       flex-direction: row;
       gap: 2.4rem;
@@ -69,7 +65,7 @@ import BorderedBox from "@/components/BorderedBox.vue";
     main {
       max-width: 1024px;
       margin: 0 auto;
-      padding: 3rem;
+      padding: 3rem 3rem 100px;
     }
 
     .heading-title {
