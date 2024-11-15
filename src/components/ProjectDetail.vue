@@ -212,7 +212,6 @@
   <style>
 .project__content .box__border {
     padding: 100px 2.4rem 2.4rem;
-    position: relative;
     overflow: hidden;
 }
 .tabs__content .heading-2 {

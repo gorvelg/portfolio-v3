@@ -38,5 +38,6 @@
     background: var(--bg-color-primary);
     border-radius: 12px;
     padding: 2.4rem;
+    position: relative;
   }
 </style>
