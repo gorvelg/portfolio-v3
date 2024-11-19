@@ -30,7 +30,18 @@ ul {
     justify-content: center;
     flex-direction: column;
 }
-
+ul:after{
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 9px solid transparent;
+    border-top: 12px solid var(--border-color);
+    border-right: 9px solid transparent;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transform: translateX(-50%);
+    }
 ul::before {
     background: var(--border-color) none repeat scroll 0 0;
     content: "";
@@ -76,7 +87,20 @@ li:hover::before {
     ul {
         flex-direction: row-reverse;
     }
-
+    ul:after{
+        content: "";
+        width: 0;
+        height: 0;
+        border-top: 9px solid transparent;
+        border-left: 12px solid var(--border-color);
+        border-bottom: 9px solid transparent;
+        position: absolute;
+        right: -15px;
+        top: calc(50% + 1.5px);
+        transform: translateY(-50%);
+        bottom: unset;
+        left: unset;
+    }
     ul::before {
         background: var(--border-color) none repeat scroll 0 0;
         content: "";
