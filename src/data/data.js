@@ -14,6 +14,9 @@ import bannerIutask from "@/assets/img/banner-iutask.jpg";
 import bannerSkyview from "@/assets/img/banner-skyview.jpg";
 import bannerMpc from "@/assets/img/banner-mpc.jpg";
 
+// Images de la galerie
+import galleryMpc from "@/assets/img/gallery/mpc.jpeg";
+
 export const projects = [
   {
     id: 1,
@@ -290,10 +293,7 @@ export const projects = [
         Challenge
         </div>
          Ce projet m'a amené à développer et à implémenter plusieurs modules personnalisés pour répondre aux besoins spécifiques du site et optimiser l'expérience utilisateur.`,
-      gallery: [
-        "https://via.placeholder.com/300",
-        "https://via.placeholder.com/300",
-      ],
+      gallery: [galleryMpc, "https://via.placeholder.com/300"],
       website: "https://mesurezpascher.fr",
     },
   },
