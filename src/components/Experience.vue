@@ -76,6 +76,9 @@ li:hover::before {
     background: var(--btn-bg-hover-color-primary);
     border-color: var(--border-color-selected);
 }
+li:hover {
+  color: var(--hover-link-text-color);
+}
 
 .experience__content {
     display: flex;
