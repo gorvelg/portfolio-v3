@@ -24,18 +24,37 @@ export const projects = [
     stack: ["symfony", "twig", "tailwind", "javascript"],
     sections: {
       overview:
-        "Receipt Manager est une application de gestion de tickets de caisse pour deux utilisateurs.",
+        "Receipt Manager est une application de gestion de tickets de caisse pour deux utilisateurs. Chaque mois, un mail est envoyé aux utilisateurs afin de savoir s'ils doivent remboursé ou être remboursé par l'autre utilisateur.",
       details: `
-        Cette application permet à deux utilisateurs de gérer facilement
-        leurs tickets de caisse, de les organiser par date et de générer
-        des rapports statistiques sur leurs dépenses. 
-        Chaque mois, un mail est envoyé aux utilisateurs afin de savoir s'ils doivent remboursé ou être remboursé par l'autre utilisateur.`,
+        <div class="heading-2">
+            <i class="fa-solid fa-bullseye"></i>
+            Objectifs
+        </div>
+        <ul>
+            <li>Permettre à deux utilisateurs de gérer leurs tickets de caisse.</li>
+            <li>Organiser les tickets par date.</li>
+            <li>Générer un historique avec la totalité des dépenses pour chaque utilisateur.</li>
+            <li>Envoyer un mail mensuel pour le remboursement.</li>
+        </ul><br>
+        <div class="heading-2">
+            <i class="fa-solid fa-stairs"></i>
+        Challenge
+        </div>
+        <ul>
+            <li>Création de commandes Symfony, exécuter avec un CRON.</li>
+            <li>Utiliser un service mail</li>
+            <li>Créer une interface utilisateur simple et intuitive.</li>
+            <li>Optimiser le stockage des données en supprimant mensuellement les images stockées sur le serveur.</li>
+        </ul>
+
+        `,
+
       gallery: [
         "https://via.placeholder.com/300",
         "https://via.placeholder.com/300",
         "https://via.placeholder.com/300",
       ],
-      website: "https://www.receiptmanager.com",
+      website: "https://ticket.guillaume-gorvel.fr",
       github: "https://github.com/gorvelg/receipt-manager",
     },
   },
@@ -51,16 +70,34 @@ export const projects = [
       overview:
         "Skyview est une application météo qui fournit des prévisions à l'aide d'une API. Les utilisateurs inscrits ont la possibilité de personnaliser l'affichage des données.",
       details: `
-        <b>SkyView</b> est une application de météo développée pour un projet universitaire (SAÉ). L'application intègre un <b>système de gestion des utilisateurs</b> complet, avec inscription, connexion et réinitialisation de mot de passe, permettant à chacun de créer et de gérer son profil et ses préférences. Les utilisateurs peuvent <b>personnaliser l'affichage des données météo</b> et configurer des <b>alertes spécifiques</b> pour des conditions comme les tempêtes ou le gel.<br/><br/>
-    
-        SkyView se distingue par l'<b>intégration sécurisée d'APIs externes</b>, garantissant des <b>données en temps réel</b> optimisées par un <b>système de mise en cache</b> pour réduire la charge sur les serveurs. Les utilisateurs non connectés ont accès à des <b>prévisions générales pour les grandes villes</b> et peuvent rechercher des conditions par nom de ville ou code postal via une interface de découverte. Cette interface incite à s’inscrire pour accéder à des <b>fonctionnalités étendues</b>.<br/><br/>
-    
-        Les utilisateurs connectés bénéficient de la <b>gestion de lieux favoris</b> et de la <b>personnalisation des types de données affichées</b> (température, vent, etc.). L'interface permet de mettre à jour les informations de profil et de <b>gérer les alertes</b> facilement. <b>SkyView</b> propose ainsi une approche complète et fluide de la météo, alliant <b>personnalisation</b> et <b>précision</b>.`,
+      <div class="heading-2">
+            <i class="fa-solid fa-bullseye"></i>
+            Objectifs
+        </div>
+        <ul>
+            <li>Créer une application météo avec des prévisions en temps réel.</li>
+            <li>Intégrer des APIs externes pour obtenir des données précises.</li>
+            <li>Permettre aux utilisateurs de personnaliser l'affichage des données.</li>
+            <li>Proposer des alertes météo personnalisées.</li>
+            <li>Créer une interface de découverte pour les utilisateurs non connectés.</li>
+        </ul><br>
+        <div class="heading-2">
+            <i class="fa-solid fa-stairs"></i>
+        Challenge
+        </div>
+        <ul>
+            <li>Intégrer des APIs externes de manière sécurisée.</li>
+            <li>Optimiser les données en temps réel avec un système de mise en cache afin de réduire la charge sur les serveurs.</li>
+            <li>Proposer une interface utilisateur fluide et intuitive.</li>
+            <li>Inciter les utilisateurs à s'inscrire pour accéder à des fonctionnalités étendues.(gestion de lieux favoris, personnalisation des types de données affichées...)</li>
+            <li>Envoyer un mail pour l'inscription, mais aussi pour les mots de passe oubliés(avec un systeme de token unique).</li>
+        </ul><br>
+       `,
       gallery: [
         "https://via.placeholder.com/300",
         "https://via.placeholder.com/300",
       ],
-      github: 'https://github.com/elisegrt/SAE_401',
+      github: "https://github.com/elisegrt/SAE_401",
     },
   },
   {
@@ -72,17 +109,36 @@ export const projects = [
     stack: ["symfony", "twig", "tailwind", "javascript"],
     sections: {
       banner: bannerIutask,
-      overview: "Ceci est une vue d'ensemble du projet IUTask.",
+      overview:
+        "IUTask est une application conçue pour aider les étudiants à organiser et gérer leurs devoirs. Elle permet de créer des rappels, de définir des priorités, et de suivre les tâches en cours.",
       details: `
-        IUTask est une application conçue pour aider les étudiants
-        à organiser et gérer leurs devoirs. Elle permet de créer des
-        rappels, de définir des priorités, et de suivre les tâches
-        en cours.`,
+        <div class="heading-2">
+            <i class="fa-solid fa-bullseye"></i>
+            Objectifs
+        </div>
+        <ul>
+            <li>Créer une application de gestion de devoirs pour les étudiants.</li>
+            <li>Organiser les devoirs par date et par matière.</li>
+            <li>Visibilité des devoirs uniquement pour les étudiants du même groupe.</li>
+            <li>Permettre aux utilisateurs de créer des rappels et de définir des priorités.</li>
+            <li>Créer des notifications pour les tâches à venir.</li>
+            <li>Créer une interface utilisateur simple et intuitive.</li>
+        </ul><br>
+        <div class="heading-2">
+            <i class="fa-solid fa-stairs"></i>
+        Challenge
+        </div>
+        <ul>
+            <li>Créer un système de rappels et d'alertes pour les tâches à venir.</li>
+            <li>Ajout d'un calendrier interactif.</li>
+            <li>Création de composants Twig.</li>
+        </ul><br>
+        `,
       gallery: [
         "https://via.placeholder.com/300",
         "https://via.placeholder.com/300",
       ],
-      github: "https://github.com/BriqueAuBob/sae301"
+      github: "https://github.com/BriqueAuBob/sae301",
     },
   },
   {
@@ -94,18 +150,33 @@ export const projects = [
     stack: ["php", "html", "css", "javascript"],
     sections: {
       banner: bannerDuckyDriver,
-      overview: "Ceci est une vue d'ensemble du projet Ducky Driver.",
+      overview:
+        "Ducky Driver est un projet universitaire de fin de première année de MMI. C'est un site de covoiturage spécialement conçu pour les étudiants.",
       details: `
-        Ducky Driver est un site de covoiturage spécialement conçu
-        pour les étudiants. Il facilite la mise en relation entre
-        conducteurs et passagers, permettant des trajets partagés
-        et économiques.`,
+        <div class="heading-2">
+            <i class="fa-solid fa-bullseye"></i>
+            Objectifs
+        </div>
+        <ul>
+            <li>Créer un site de covoiturage pour les étudiants.</li>
+            <li>Permettre aux utilisateurs de proposer et de rechercher des trajets.</li>
+            <li>Inscription et personnalisation de profil.</li>
+        </ul>
+        <div class="heading-2">
+            <i class="fa-solid fa-stairs"></i>
+        Challenge
+        </div>
+        <ul>
+            <li>Créer un système de recherche de trajets.</li>
+            <li>Utilisation de Figma pour l'UI Design (wireframe et design system, charte graphique).</li>
+            <li>Utilisation de Git pour faciliter la collaboration.</li>
+        `,
       gallery: [
         "https://via.placeholder.com/300",
         "https://via.placeholder.com/300",
       ],
       github: "https://github.com/Rophyr/sae202",
-      website: "https://mmi22f01.sae202.ovh"
+      website: "https://mmi22f01.sae202.ovh",
     },
   },
   {
@@ -117,18 +188,36 @@ export const projects = [
     stack: ["php", "html", "css", "javascript"],
     sections: {
       banner: bannerLaMminuterie,
-      overview: "Ceci est une vue d'ensemble du projet La MMINUTERIE.",
+      overview:
+        "La MMINUTERIE est un projet universitaire de première année de MMI. Il consistait à manipuler une base de données et à créer un site web dynamique.",
       details: `
-        La MMINUTERIE est un projet universitaire mettant en avant
-        l'importance de la gestion du temps. Il s'agit d'un outil
-        interactif permettant de planifier et d'organiser des activités
-        de manière efficace.`,
+        <div class="heading-2">
+            <i class="fa-solid fa-bullseye"></i>
+            Objectifs
+        </div>
+        <ul>
+            <li>Créer un site web dynamique simple avec une base de données.</li>
+            <li>Affichage des données et formulaire de recherche.</li>
+            <li>CRUD via un back office sécurisé.</li>
+            <li>Accessibilité et Responsive.</li>
+        </ul>
+        <div class="heading-2">
+            <i class="fa-solid fa-stairs"></i>
+        Challenge
+        </div>
+        <ul>
+            <li>Réfléchir à la structure des données en créant un dictionnaire, un MCD et un MLD.</li>
+            <li>Créer des requêtes SQL en le combinant avec du PHP natif.</li>
+            <li>Sécuriser les formulaires avec les outils sanitize de PHP.</li>
+            <li>Déployer sur un VPS le site et sa base de données.</li>
+        </ul>
+        `,
       gallery: [
         "https://via.placeholder.com/300",
         "https://via.placeholder.com/300",
       ],
       github: "https://github.com/gorvelg/sae203",
-      website: "https://mmi22f01.sae203.ovh"
+      website: "https://mmi22f01.sae203.ovh",
     },
   },
   {
@@ -151,7 +240,7 @@ export const projects = [
         "https://via.placeholder.com/300",
       ],
       github: "https://github.com/gorvelg/racontines",
-      website: "http://guillaume-gorvel.fr/racontines"
+      website: "http://guillaume-gorvel.fr/racontines",
     },
   },
   {
@@ -184,7 +273,8 @@ export const projects = [
     stack: ["magento"],
     sections: {
       banner: bannerMpc,
-      overview: "Après la refonte du site distrame.fr et de sa migration vers Magento (offrant des fonctionnalités de multi-boutique), j'ai été chargé de conduire la refonte complète du site Mesurez pas cher et de l'intégrer à cette nouvelle plateforme.",
+      overview:
+        "Après la refonte du site distrame.fr et de sa migration vers Magento (offrant des fonctionnalités de multi-boutique), j'ai été chargé de conduire la refonte complète du site Mesurez pas cher et de l'intégrer à cette nouvelle plateforme.",
       details: `
         <div class="heading-2">
             <i class="fa-solid fa-bullseye"></i>
