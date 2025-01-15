@@ -37,6 +37,7 @@
     display: flex;
     gap: 1rem;
     border-bottom: 1px solid var(--inactive-link-text-color);
+    overflow-y: hidden;
   }
   .tabs__header button {
     color: var(--inactive-link-text-color);
