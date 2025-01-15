@@ -122,6 +122,7 @@
   .main {
     max-width: 1080px;
     margin: auto;
+    padding: 0 1rem 100px;
   }
   .project {
     display: flex;
@@ -181,33 +182,37 @@
     border: 2px solid var(--border-color-selected);
     display: flex;
     font-weight: 600;
-    position: absolute;
+    position: fixed;
     width: 50px;
     height: 50px;
     border-radius: 50%;
     align-items: center;
     justify-content: center;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 5px 2px;
+    bottom: 100px;
+    transform: translateY(-50%);
   }
   .arrow__link:hover {
     color: var(--hover-link-text-color);
     background: var(--btn-bg-hover-color-primary);
   }
   .arrow__link--left {
-    top: 50%;
     left: 24px;
-    transform: translateY(-50%);
   }
   .arrow__link--right {
-    top: 50%;
     right: 24px;
-    transform: translateY(-50%);
   }
   .gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     row-gap: 24px;
   }
+  @media screen and (min-width: 728px){
+    .arrow__link {
+      top: 50%;
+    }
+  }
+
   </style>
   <style>
 .project__content .box__border {
