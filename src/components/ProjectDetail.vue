@@ -144,6 +144,7 @@
   .project__img {
     width: 100%;
     object-fit: cover;
+    object-position: right;
     position: absolute;
     top: 0;
     left: 0;
