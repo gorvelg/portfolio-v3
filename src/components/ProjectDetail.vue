@@ -163,9 +163,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: column;
   }
   .project__header h2{
     color: var(--text-color-secondary);
+    display: none;
   }
   .project__links{
   display: flex;
@@ -211,6 +213,12 @@
   @media screen and (min-width: 728px){
     .arrow__link {
       top: 50%;
+    }
+    .project__header{
+      flex-direction: row;
+    }
+    .project__header h2{
+      display: block;
     }
   }
 
