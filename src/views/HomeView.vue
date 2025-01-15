@@ -7,6 +7,8 @@ import IconLocation from '@/components/icons/IconLocation.vue';
 // Importation des images
 import memojiNormal from '@/assets/img/memoji.png';
 import memojiWink from '@/assets/img/memoji-wink.png';
+import {RouterLink} from "vue-router";
+import Sidebar from "@/components/Sidebar.vue";
 
 // Liste des images pour l'animation
 const images = [memojiNormal, memojiWink];
@@ -19,6 +21,9 @@ const handleMouseEnter = () => {
 </script>
 
 <template>
+  <Sidebar class="sidebar-sm">
+    <RouterLink to="/about">Mentions légales</RouterLink>
+  </Sidebar>
   <main>
     <div class="home">
       <div 
@@ -127,6 +132,11 @@ const handleMouseEnter = () => {
 @media (min-width: 1024px) {
   .home__heading {
     font-size: 4.8rem;
+  }
+}
+@media (min-width: 1300px) {
+  .sidebar-sm{
+    display: none;
   }
 }
 </style>

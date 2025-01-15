@@ -5,7 +5,7 @@ import Sidebar from "@/components/Sidebar.vue";
 </script>
 
 <template>
-  <Sidebar>
+  <Sidebar class="sidebar-xl">
     <RouterLink to="/about">Mentions légales</RouterLink>
     </Sidebar>
   <Navbar />
@@ -21,13 +21,21 @@ import Sidebar from "@/components/Sidebar.vue";
     padding: 0 1.6rem;
   }
   @media (min-width: 768px) {
-  .wrapper {
+    .wrapper {
     max-width: 768px;
+    }
   }
   @media (min-width: 1024px) {
-  .wrapper {
+    .wrapper {
     max-width: 1280px;
+    }
   }
-}
-}
+  .sidebar-xl{
+    display: none;
+  }
+  @media (min-width: 1300px) {
+    .sidebar-xl{
+      display: block;
+    }
+  }
 </style>
