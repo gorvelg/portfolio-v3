@@ -53,9 +53,7 @@ export const projects = [
         `,
 
       gallery: [
-        "https://via.placeholder.com/300",
-        "https://via.placeholder.com/300",
-        "https://via.placeholder.com/300",
+
       ],
       website: "https://ticket.guillaume-gorvel.fr",
       github: "https://github.com/gorvelg/receipt-manager",
@@ -97,8 +95,7 @@ export const projects = [
         </ul><br>
        `,
       gallery: [
-        "https://via.placeholder.com/300",
-        "https://via.placeholder.com/300",
+
       ],
       github: "https://github.com/elisegrt/SAE_401",
     },
@@ -138,8 +135,7 @@ export const projects = [
         </ul><br>
         `,
       gallery: [
-        "https://via.placeholder.com/300",
-        "https://via.placeholder.com/300",
+
       ],
       github: "https://github.com/BriqueAuBob/sae301",
     },
@@ -175,8 +171,7 @@ export const projects = [
             <li>Utilisation de Git pour faciliter la collaboration.</li>
         `,
       gallery: [
-        "https://via.placeholder.com/300",
-        "https://via.placeholder.com/300",
+
       ],
       github: "https://github.com/Rophyr/sae202",
       website: "https://mmi22f01.sae202.ovh",
@@ -216,8 +211,7 @@ export const projects = [
         </ul>
         `,
       gallery: [
-        "https://via.placeholder.com/300",
-        "https://via.placeholder.com/300",
+
       ],
       github: "https://github.com/gorvelg/sae203",
       website: "https://mmi22f01.sae203.ovh",
@@ -239,8 +233,7 @@ export const projects = [
         mais élégant, mettant en valeur les contenus de manière
         professionnelle.`,
       gallery: [
-        "https://via.placeholder.com/300",
-        "https://via.placeholder.com/300",
+
       ],
       github: "https://github.com/gorvelg/racontines",
       website: "http://guillaume-gorvel.fr/racontines",
@@ -262,8 +255,7 @@ export const projects = [
         leurs albums emblématiques, et les moments marquants
         de leur carrière.`,
       gallery: [
-        "https://via.placeholder.com/300",
-        "https://via.placeholder.com/300",
+
       ],
     },
   },
@@ -293,7 +285,7 @@ export const projects = [
         Challenge
         </div>
          Ce projet m'a amené à développer et à implémenter plusieurs modules personnalisés pour répondre aux besoins spécifiques du site et optimiser l'expérience utilisateur.`,
-      gallery: [galleryMpc, "https://via.placeholder.com/300"],
+      gallery: [galleryMpc],
       website: "https://mesurezpascher.fr",
     },
   },

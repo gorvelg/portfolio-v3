@@ -246,8 +246,8 @@ watch(() => route.params.id, updateProject);
   }
   .gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    row-gap: 24px;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 24px;
   }
   .gallery img{
     width: 100%;
@@ -261,6 +261,9 @@ watch(() => route.params.id, updateProject);
     }
     .project__header h2{
       display: block;
+    }
+    .gallery {
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 
