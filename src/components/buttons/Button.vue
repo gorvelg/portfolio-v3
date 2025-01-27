@@ -5,6 +5,8 @@
     :to="!href ? to : undefined"
     :href="href ? to : undefined"
   >
+
+    <i v-if="icon" :class="[icon]"></i>
     <slot></slot>
   </component>
 </template>
@@ -28,6 +30,10 @@ export default {
     href: {
       type: Boolean,
       default: false, // Définit si le lien est externe ou interne
+    },
+    icon: {
+      type: String,
+      required: false
     }
   },
   computed: {
@@ -50,6 +56,9 @@ export default {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px;
   border-radius: 2.4rem;
   transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
 .btn--primary {

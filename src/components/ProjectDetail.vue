@@ -17,8 +17,8 @@
                 </div>
                 <p>{{ project.sections.overview }}</p>
                 <div class="project__links">
-                  <Button v-if="project.sections.website" href :to="project.sections.website" type="primary" size="sm">Visiter le site</Button>
-                  <Button v-if="project.sections.github" href :to="project.sections.github" type="primary" size="sm">Voir le code</Button>
+                  <Button v-if="project.sections.website" href :to="project.sections.website" type="primary" size="sm" icon="fa-solid fa-arrow-up-right-from-square">Visiter le site</Button>
+                  <Button v-if="project.sections.github" href :to="project.sections.github" type="primary" size="sm" icon="fa-brands fa-github">Voir le code</Button>
                 </div>
               </div>
               <div v-else-if="activeTab === 'Détails'">
