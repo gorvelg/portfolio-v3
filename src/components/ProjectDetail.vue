@@ -229,20 +229,19 @@
     overflow: hidden;
 }
 .tabs__content .heading-2 {
-    font-weight: 700;
+    font-weight: 500;
     font-size: 2.4rem;
     width: max-content;
     margin-bottom: 2.5rem;
   }
 
 .tabs__content .heading-2::after {
-    content: "";
-    width: 100%;
-    height: 4px;
     display: block;
+    width: 100%;
+    content: "";
+    height: 3px;
     border-radius:9999px;
-    margin-top:1rem;
-    /* background: linear-gradient(45deg, #0090FF, #9bcaf0); */
-    background: var(--text-color-primary);
+    background: linear-gradient(45deg, #0090ff, #9bcaf0);
+
 }
 </style>
