@@ -251,6 +251,7 @@ watch(() => route.params.id, updateProject);
   }
   .gallery img{
     width: 100%;
+    cursor: pointer;
   }
   @media screen and (min-width: 728px){
     .arrow__link {

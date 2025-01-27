@@ -16,18 +16,19 @@ import bannerMpc from "@/assets/img/banner-mpc.jpg";
 
 // Images de la galerie
 import galleryMpc from "@/assets/img/gallery/mpc.jpeg";
+import galleryTicketManager from "@/assets/img/gallery/ticket-manager.png";
 
 export const projects = [
   {
     id: 1,
-    title: "Receipt Manager",
+    title: "MyTickets",
     date: "Juillet 2024",
-    desc: "Receipt Manager est une application de gestion de tickets de caisse.",
+    desc: "MyTickets est une application de gestion de tickets de caisse.",
     thumbnail: "https://via.placeholder.com/150",
     stack: ["symfony", "twig", "tailwind", "javascript"],
     sections: {
       overview:
-        "Receipt Manager est une application de gestion de tickets de caisse pour deux utilisateurs. Chaque mois, un mail est envoyé aux utilisateurs afin de savoir s'ils doivent remboursé ou être remboursé par l'autre utilisateur.",
+        "MyTickets est une application de gestion de tickets de caisse pour deux utilisateurs. Chaque mois, un mail est envoyé aux utilisateurs afin de savoir s'ils doivent remboursé ou être remboursé par l'autre utilisateur.",
       details: `
         <div class="heading-2">
             <i class="fa-solid fa-bullseye"></i>
@@ -53,7 +54,7 @@ export const projects = [
         `,
 
       gallery: [
-
+        galleryTicketManager
       ],
       website: "https://ticket.guillaume-gorvel.fr",
       github: "https://github.com/gorvelg/receipt-manager",
