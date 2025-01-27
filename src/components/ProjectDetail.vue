@@ -1,123 +1,162 @@
 <template>
-    <main class="main">
-      <div v-if="project" class="project">
-        <Heading :title="project.title" subtitle="Projet" />
-        <BorderedBox class="project__content">
-            <div class="project__img__heading">
-                <img class="project__img" :src="project.sections.banner" :alt="project.name" />
-                <div class="project__img-overlay"></div>
+  <main class="main">
+    <div v-if="project" class="project">
+      <Heading :title="project.title" subtitle="Projet" />
+      <BorderedBox class="project__content">
+        <div class="project__img__heading">
+          <img class="project__img" :src="project.sections.banner" :alt="project.name" />
+          <div class="project__img-overlay"></div>
+        </div>
+
+        <Tabs :tabs="tabs">
+          <template #default="{ activeTab }">
+            <div v-if="activeTab === 'Vue d\'ensemble'">
+              <div class="project__header">
+                <h2>{{ project.title }}</h2>
+                <ProjectStack :stack="project.stack" :techColors="techColors" />
+              </div>
+              <p>{{ project.sections.overview }}</p>
+              <div class="project__links">
+                <Button
+                    v-if="project.sections.website"
+                    href
+                    :to="project.sections.website"
+                    type="primary"
+                    size="sm"
+                    icon="fa-solid fa-arrow-up-right-from-square"
+                >
+                  Visiter le site
+                </Button>
+                <Button
+                    v-if="project.sections.github"
+                    href
+                    :to="project.sections.github"
+                    type="primary"
+                    size="sm"
+                    icon="fa-brands fa-github"
+                >
+                  Voir le code
+                </Button>
+              </div>
             </div>
-    
-          <Tabs :tabs="tabs">
-            <template #default="{ activeTab }">
-              <div v-if="activeTab === 'Vue d\'ensemble'">
-                <div class="project__header">
-                  <h2>{{project.title}}</h2>
-                  <ProjectStack :stack="project.stack" :techColors="techColors" />
-                </div>
-                <p>{{ project.sections.overview }}</p>
-                <div class="project__links">
-                  <Button v-if="project.sections.website" href :to="project.sections.website" type="primary" size="sm" icon="fa-solid fa-arrow-up-right-from-square">Visiter le site</Button>
-                  <Button v-if="project.sections.github" href :to="project.sections.github" type="primary" size="sm" icon="fa-brands fa-github">Voir le code</Button>
-                </div>
-              </div>
-              <div v-else-if="activeTab === 'Détails'">
-                <div v-html="project.sections.details"></div>
-              </div>
-              <div v-else-if="activeTab === 'Galerie'">
-                <div class="gallery">
-                  <img
+
+            <div v-else-if="activeTab === 'Détails'">
+              <div v-html="project.sections.details"></div>
+            </div>
+
+            <div v-else-if="activeTab === 'Galerie'">
+              <div class="gallery">
+                <img
                     v-for="(image, index) in project.sections.gallery"
                     :key="index"
                     :src="image"
                     alt="Gallery Image"
-                  />
-                </div>
+                    @click="openModal(image)"
+                />
               </div>
-            </template>
-          </Tabs>
-        </BorderedBox>
-      </div>
-      <div v-else>
-        <p>Aucun projet trouvé</p>
-      </div>
-  
-      <RouterLink
+            </div>
+          </template>
+        </Tabs>
+      </BorderedBox>
+    </div>
+
+    <div v-else>
+      <p>Aucun projet trouvé</p>
+    </div>
+
+    <RouterLink
         v-if="previousProject !== null"
         :to="{ name: 'project', params: { id: previousProject } }"
         class="arrow__link arrow__link--left"
-      >
-        ←
-      </RouterLink>
-      <RouterLink
+    >
+      ←
+    </RouterLink>
+    <RouterLink
         v-if="nextProject !== null"
         :to="{ name: 'project', params: { id: nextProject } }"
         class="arrow__link arrow__link--right"
-      >
-        →
-      </RouterLink>
-    </main>
-  </template>
-  
-  <script setup>
-  import { projects } from '@/data/data.js';
-  import { ref, onMounted, watch } from 'vue';
-  import { useRoute } from 'vue-router';
-  import Heading from '@/components/Heading.vue';
-  import BorderedBox from '@/components/BorderedBox.vue';
-  import Tabs from '@/components/Tabs.vue';
-  import Button from '@/components/buttons/Button.vue';
-  // Importation des icônes
-  import IconList from '@/components/icons/IconList.vue';
-  import GalleryIcon from '@/components/icons/IconGallery.vue';
-  import IconOverview from '@/components/icons/IconOverview.vue';
-  import ProjectStack from "@/components/ProjectStack.vue";
-  
-  const route = useRoute();
-  const project = ref(null);
-  const previousProject = ref(null);
-  const nextProject = ref(null);
+    >
+      →
+    </RouterLink>
 
-  const techColors = {
-    symfony: '#4d5b6b',
-    tailwind: '#38bdf8',
-    vuejs: '#42B782',
-    javascript: '#F5A907',
-    html: '#DB4B2E',
-    css: '#006CB5',
-    php: '#4D588E',
-    jquery: '#0865A6',
-    twig: '#84A21A',
-    magento: '#ff9d3d',
-  };
+    <!-- Modale -->
+    <Modal :isOpen="isModalOpen" @close="closeModal">
+      <img :src="selectedImage" alt="Selected Image" style="max-width: 100%; max-height: 100%;" />
+    </Modal>
+  </main>
+</template>
 
-  const tabs = [
-    { name: 'Vue d\'ensemble', icon: IconOverview },
-    { name: 'Détails', icon: IconList },
-    { name: 'Galerie', icon: GalleryIcon }
-  ];
-  
-  const updateProject = () => {
-    const projectId = parseInt(route.params.id);
-    project.value = projects.find((p) => p.id === projectId) || null;
-    previousProject.value = getPreviousProjectId(projectId);
-    nextProject.value = getNextProjectId(projectId);
-  };
-  
-  const getPreviousProjectId = (id) => {
-    const currentIndex = projects.findIndex((p) => p.id === id);
-    return currentIndex > 0 ? projects[currentIndex - 1].id : null;
-  };
-  
-  const getNextProjectId = (id) => {
-    const currentIndex = projects.findIndex((p) => p.id === id);
-    return currentIndex < projects.length - 1 ? projects[currentIndex + 1].id : null;
-  };
-  
-  onMounted(() => updateProject());
-  watch(() => route.params.id, updateProject);
-  </script>
-  
+
+<script setup>
+import { projects } from "@/data/data.js";
+import { ref, onMounted, watch } from "vue";
+import { useRoute } from "vue-router";
+import Heading from "@/components/Heading.vue";
+import BorderedBox from "@/components/BorderedBox.vue";
+import Tabs from "@/components/Tabs.vue";
+import Button from "@/components/buttons/Button.vue";
+import Modal from "@/components/Modal.vue";
+import IconList from "@/components/icons/IconList.vue";
+import GalleryIcon from "@/components/icons/IconGallery.vue";
+import IconOverview from "@/components/icons/IconOverview.vue";
+import ProjectStack from "@/components/ProjectStack.vue";
+
+const route = useRoute();
+const project = ref(null);
+const previousProject = ref(null);
+const nextProject = ref(null);
+const isModalOpen = ref(false);
+const selectedImage = ref("");
+
+const techColors = {
+  symfony: "#4d5b6b",
+  tailwind: "#38bdf8",
+  vuejs: "#42B782",
+  javascript: "#F5A907",
+  html: "#DB4B2E",
+  css: "#006CB5",
+  php: "#4D588E",
+  jquery: "#0865A6",
+  twig: "#84A21A",
+  magento: "#ff9d3d",
+};
+
+const tabs = [
+  { name: "Vue d'ensemble", icon: IconOverview },
+  { name: "Détails", icon: IconList },
+  { name: "Galerie", icon: GalleryIcon },
+];
+
+const updateProject = () => {
+  const projectId = parseInt(route.params.id);
+  project.value = projects.find((p) => p.id === projectId) || null;
+  previousProject.value = getPreviousProjectId(projectId);
+  nextProject.value = getNextProjectId(projectId);
+};
+
+const getPreviousProjectId = (id) => {
+  const currentIndex = projects.findIndex((p) => p.id === id);
+  return currentIndex > 0 ? projects[currentIndex - 1].id : null;
+};
+
+const getNextProjectId = (id) => {
+  const currentIndex = projects.findIndex((p) => p.id === id);
+  return currentIndex < projects.length - 1 ? projects[currentIndex + 1].id : null;
+};
+
+const openModal = (image) => {
+  selectedImage.value = image;
+  isModalOpen.value = true;
+};
+
+const closeModal = () => {
+  isModalOpen.value = false;
+};
+
+onMounted(() => updateProject());
+watch(() => route.params.id, updateProject);
+</script>
+
   <style scoped>
   .main {
     max-width: 1080px;
@@ -209,6 +248,9 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     row-gap: 24px;
+  }
+  .gallery img{
+    width: 100%;
   }
   @media screen and (min-width: 728px){
     .arrow__link {
