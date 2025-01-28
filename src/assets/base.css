@@ -53,6 +53,8 @@
   /* Border and separators */
   --border-color-light: #8EC8F6;
   --border-color-dark: #205D9E;
+  --border-color-secondary-light: #CDCED6;
+  --border-color-secondary-dark: #484848;
 
   --border-color-selected-light: #5EB1EF;
   --border-color-selected-dark: #2870BD;
@@ -71,11 +73,11 @@
   --btn-text-color-dark-primary: #70B8FF;
   /* Secondary Light */
   --btn-bg-color-light-secondary: #fff;
-  --btn-bg-hover-color-light-secondary: #f7f7f7;;
+  --btn-bg-hover-color-light-secondary: #f7f7f7;
   --btn-text-color-light-secondary: #222;
   /* Secondary Dark */
-  --btn-bg-color-dark-secondary: #333;
-  --btn-bg-hover-color-dark-secondary: #3B9EFF;
+  --btn-bg-color-dark-secondary: #212225;
+  --btn-bg-hover-color-dark-secondary: #272A2D;
   --btn-text-color-dark-secondary: #f2f2f2;
   /* Hover background smooth */
   --bg-hover-color-smooth-light: #c2e6ff30;
@@ -174,6 +176,7 @@
 
   /* Border Color */
   --border-color: var(--border-color-light);
+  --border-color-secondary: var(--border-color-secondary-light);
   --border-color-selected: var(--border-color-selected-light);
   --separator-color: var(--separator-color-light);
 
@@ -292,6 +295,7 @@ body {
 
   /* Border Color */
   --border-color: var(--border-color-dark);
+  --border-color-secondary: var(--border-color-secondary-dark);
   --border-color-selected: var(--border-color-selected-dark);
   --separator-color: var(--separator-color-dark);
 

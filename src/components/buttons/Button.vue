@@ -69,6 +69,8 @@ export default {
 .btn--secondary {
   background-color: var(--btn-bg-color-secondary);
   color: var(--btn-text-color-secondary);
+  border: var(--border-color-secondary) 2px solid;
+
 }
 
 .btn--primary:hover {
