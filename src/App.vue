@@ -2,9 +2,11 @@
 import { RouterLink, RouterView } from 'vue-router'
 import Navbar from './components/Navbar.vue';
 import Sidebar from "@/components/Sidebar.vue";
+import Background from "@/components/Background.vue";
 </script>
 
 <template>
+  <Background />
   <Sidebar class="sidebar-xl">
     <RouterLink to="/about">Mentions légales</RouterLink>
     </Sidebar>

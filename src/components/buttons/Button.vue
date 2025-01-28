@@ -59,6 +59,7 @@ export default {
   display: flex;
   align-items: center;
   gap: 4px;
+  font-weight: 600;
 }
 
 .btn--primary {

@@ -24,7 +24,7 @@
   --text-color-primary-light: #0D74CE;
   /* Background and Text color Primary Dark */
   --bg-color-primary-dark: #0D1520;
-  --text-color-primary-dark: #70B8FF;
+  --text-color-primary-dark: #C2E6FF;
 
   /* Background and Text color Secondary Light */
   --bg-color-secondary-light: #222;
@@ -108,6 +108,36 @@
   --tailwind-dark: #70B8FF;
   --vuejs-dark: #70B8FF;
   --wordpress-dark: #70B8FF;
+
+  --color-background-light: #fff;
+  --blue-1-light:#FBFDFF;
+  --blue-2-light: #F4FAFF;
+  --blue-3-light: #E6F4FE;
+  --blue-4-light: #D5EFFF;
+  --blue-5-light: #C2E5FF;
+  --blue-6-light: #ACD8FC;
+  --blue-7-light: #8EC8F6;
+  --blue-8-light: #5EB1EF;
+  --blue-9-light: #0090FF;
+  --blue-10-light: #0588F0;
+  --blue-11-light: #0D74CE;
+  --blue-12-light: #113264;
+  --color-background-dark: #000000;
+  --blue-1-dark:#0D1520;
+  --blue-2-dark: #111927;
+  --blue-3-dark: #0D2847;
+  --blue-4-dark: #003362;
+  --blue-5-dark: #004074;
+  --blue-6-dark: #104D87;
+  --blue-7-dark: #205D9E;
+  --blue-8-dark: #2870BD;
+  --blue-9-dark: #0090FF;
+  --blue-10-dark: #3B9EFF;
+  --blue-11-dark: #70B8FF;
+  --blue-12-dark: #C2E6FF;
+
+
+
   /*-------------------------------------------*/
   /* semantic color variables for this project */
   /*-------------------------------------------*/
@@ -169,6 +199,16 @@
   --tailwind-color: var(--tailwind-light);
   --vuejs-color: var(--vuejs-light);
   --wordpress-color: var(--wordpress-light);
+
+  --color-background-image-base: var(--color-background-light);
+  --color-background-image-accent-1: var(--blue-7-light);
+  --color-background-image-accent-2: var(--blue-6-light);
+  --color-background-image-accent-3: var(--blue-9-light);
+  --color-background-image-accent-4: var(--blue-5-light);
+  --color-background-image-accent-5: var(--blue-1-light);
+  --color-background-image-accent-6: var(--blue-5-light);
+  --color-background-image-accent-7: var(--blue-5-light);
+
 }
 *,
 *::before,
@@ -277,4 +317,13 @@ body {
   --tailwind-color: var(--tailwind-dark);
   --vuejs-color: var(--vuejs-dark);
   --wordpress-color: var(--wordpress-dark);
+
+  --color-background-image-base: var(--color-background-dark);
+  --color-background-image-accent-1: var(--blue-7-dark);
+  --color-background-image-accent-2: var(--blue-6-dark);
+  --color-background-image-accent-3: var(--blue-9-dark);
+  --color-background-image-accent-4: var(--blue-5-dark);
+  --color-background-image-accent-5: var(--blue-1-dark);
+  --color-background-image-accent-6: var(--blue-5-dark);
+  --color-background-image-accent-7: var(--blue-5-dark);
 }
