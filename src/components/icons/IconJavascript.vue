@@ -6,7 +6,7 @@
 </template>
 <style scoped>
 .icon__svg {
-    fill: var(--text-color-primary);
+    fill: var(--javascript-color)
 }
 .icon__svg:hover {
     fill: var(--hover-link-text-color);
