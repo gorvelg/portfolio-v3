@@ -1,23 +1,35 @@
 <script setup>
-import { ref } from 'vue';
+import {onMounted, ref} from 'vue';
 import Button from '@/components/buttons/Button.vue';
 import HomeNetwork from '@/components/Home/HomeNetwork.vue';
 import IconLocation from '@/components/icons/IconLocation.vue';
 
-// Importation des images
+
 import memojiNormal from '@/assets/img/memoji.png';
 import memojiWink from '@/assets/img/memoji-wink.png';
 import {RouterLink} from "vue-router";
 import Sidebar from "@/components/Sidebar.vue";
+import {gsap} from "gsap";
 
-// Liste des images pour l'animation
+
 const images = [memojiNormal, memojiWink];
 const currentImageIndex = ref(0);
 
-// Fonction pour gérer le survol
+
 const handleMouseEnter = () => {
   currentImageIndex.value = (currentImageIndex.value + 1) % images.length;
 };
+
+onMounted(() => {
+  gsap.from('.home', {
+    opacity: 0,
+    y: 30,
+    duration: 0.8,
+    stagger: 0.2,
+    ease: 'power2.out'
+  })
+})
+
 </script>
 
 <template>

@@ -1,9 +1,23 @@
 <script setup>
+import { onMounted } from 'vue'
+import { gsap } from "gsap";
+
 import TechStack from '@/components/TechStack.vue';
 import Heading from '@/components/Heading.vue';
 import BorderedBox from "@/components/BorderedBox.vue";
 import Experience from '@/components/Experience.vue';
 import { experiences } from '@/data/experiences';
+
+
+onMounted(() => {
+  gsap.from('.heading, .techstack__group, .box', {
+    opacity: 0,
+    y: 30,
+    duration: 0.8,
+    stagger: 0.2,
+    ease: 'power2.out'
+  })
+})
 
 </script>
 
