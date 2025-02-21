@@ -10,6 +10,7 @@ import memojiWink from '@/assets/img/memoji-wink.png';
 import {RouterLink} from "vue-router";
 import Sidebar from "@/components/Sidebar.vue";
 import {gsap} from "gsap";
+import CopyButton from "@/components/buttons/CopyButton.vue";
 
 
 const images = [memojiNormal, memojiWink];
@@ -59,7 +60,7 @@ onMounted(() => {
         </div>
         <div class="home__btn">
           <Button type="secondary" size="md" to="/projects">Voir plus...</Button>
-          <Button type="primary" size="md" to="/about">Me contacter</Button>
+          <CopyButton/>
         </div>
         <HomeNetwork />
       </div>
@@ -130,6 +131,7 @@ onMounted(() => {
 
 .home__btn {
   display: flex;
+  flex-direction: column;
   gap: 1.6rem;
 }
 
@@ -138,6 +140,9 @@ onMounted(() => {
     font-size: 3.2rem;
   }
   .home {
+    flex-direction: row;
+  }
+  .home__btn{
     flex-direction: row;
   }
 }
