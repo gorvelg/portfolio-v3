@@ -5,6 +5,7 @@ import thumbnailDuckyDriver from "@/assets/img/thumbnail-ducky-driver.jpg";
 import thumbnailIutask from "@/assets/img/thumbnail-iutask.jpg";
 import thumbnailSkyview from "@/assets/img/thumbnail-skyview.jpg";
 import thumbnailMpc from "@/assets/img/thumbnail-mpc.jpg";
+import thumbnailMyTickets from "@/assets/img/thumbnail-my-tickets.jpg";
 
 import bannerLaMminuterie from "@/assets/img/banner-la-mminuterie.jpg";
 import bannerDuckyDriver from "@/assets/img/banner-ducky-driver.jpg";
@@ -13,6 +14,7 @@ import bannerRacontines from "@/assets/img/banner-racontines.jpg";
 import bannerIutask from "@/assets/img/banner-iutask.jpg";
 import bannerSkyview from "@/assets/img/banner-skyview.jpg";
 import bannerMpc from "@/assets/img/banner-mpc.jpg";
+import bannerMyTickets from "@/assets/img/banner-my-tickets.jpg";
 
 // Images de la galerie
 import galleryMpc from "@/assets/img/gallery/mpc.jpeg";
@@ -24,9 +26,10 @@ export const projects = [
     title: "MyTickets",
     date: "Juillet 2024",
     desc: "MyTickets est une application de gestion de tickets de caisse.",
-    thumbnail: "https://via.placeholder.com/150",
+    thumbnail: thumbnailMyTickets,
     stack: ["symfony", "twig", "tailwind", "javascript"],
     sections: {
+      banner: bannerMyTickets,
       overview:
         "MyTickets est une application de gestion de tickets de caisse pour deux utilisateurs. Chaque mois, un mail est envoyé aux utilisateurs afin de savoir s'ils doivent remboursé ou être remboursé par l'autre utilisateur.",
       details: `
