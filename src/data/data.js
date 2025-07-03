@@ -22,6 +22,7 @@ import bannerPolygones from "@/assets/img/banner-polygones.jpg";
 import galleryMpc from "@/assets/img/gallery/mpc.jpeg";
 import galleryTicketManager from "@/assets/img/gallery/ticket-manager.png";
 import galleryPolygones from "@/assets/img/gallery/polygone-responsive.jpg";
+import galleryPolygones1 from "@/assets/img/gallery/polygones-landing-page.png";
 
 export const projects = [
   {
@@ -327,7 +328,7 @@ export const projects = [
             <li>Architecture <b>full stack modulaire</b> avec un back-end Symfony(API Platform) et front avec Vue 3.</li>
         </ul>
       `,
-      gallery: [galleryPolygones],
+      gallery: [galleryPolygones, galleryPolygones1],
       website: "https://polygones.guillaume-gorvel.fr",
     },
   },

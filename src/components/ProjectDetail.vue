@@ -270,6 +270,9 @@ watch(() => route.params.id, updateProject);
   .gallery img{
     width: 100%;
     cursor: pointer;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: top;
   }
   @media screen and (min-width: 728px){
     .arrow__link {
