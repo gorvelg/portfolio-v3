@@ -13,7 +13,7 @@
             <div v-if="activeTab === 'Vue d\'ensemble'">
               <div class="project__header">
                 <h2>{{ project.title }}</h2>
-                <ProjectStack :stack="project.stack" :techColors="techColors" />
+                <ProjectStack :stack="project.stack" :techColors="techColors" :techLabels="techLabels" />
               </div>
               <p>{{ project.sections.overview }}</p>
               <div class="project__links">
@@ -119,7 +119,25 @@ const techColors = {
   jquery: "#0865A6",
   twig: "#84A21A",
   magento: "#ff9d3d",
+  leaflet: "#B4DD65",
+  APIPlatform: '#65C9C8'
 };
+
+const techLabels = {
+  symfony: "Symfony",
+  tailwind: "Tailwind CSS",
+  vuejs: "Vue.js",
+  javascript: "JavaScript",
+  html: "HTML",
+  css: "CSS",
+  php: "PHP",
+  jquery: "jQuery",
+  twig: "Twig",
+  magento: "Magento",
+  leaflet: "Leaflet",
+  APIPlatform: "API Platform"
+};
+
 
 const tabs = [
   { name: "Vue d'ensemble", icon: IconOverview },

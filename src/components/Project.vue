@@ -7,16 +7,33 @@ const hoveredIndex = ref(0);
 
 // Couleurs des techs
 const techColors = {
-  symfony: '#4d5b6b',
-  tailwind: '#38bdf8',
-  vuejs: '#42B782',
-  javascript: '#F5A907',
-  html: '#DB4B2E',
-  css: '#006CB5',
-  php: '#4D588E',
-  jquery: '#0865A6',
-  twig: '#84A21A',
-  magento: '#ff9d3d',
+  symfony: "#4d5b6b",
+  tailwind: "#38bdf8",
+  vuejs: "#42B782",
+  javascript: "#F5A907",
+  html: "#DB4B2E",
+  css: "#006CB5",
+  php: "#4D588E",
+  jquery: "#0865A6",
+  twig: "#84A21A",
+  magento: "#ff9d3d",
+  leaflet: "#B4DD65",
+  APIPlatform: '#65C9C8'
+};
+
+const techLabels = {
+  symfony: "Symfony",
+  tailwind: "Tailwind CSS",
+  vuejs: "Vue.js",
+  javascript: "JavaScript",
+  html: "HTML",
+  css: "CSS",
+  php: "PHP",
+  jquery: "jQuery",
+  twig: "Twig",
+  magento: "Magento",
+  leaflet: "Leaflet",
+  APIPlatform: "API Platform"
 };
 </script>
 
@@ -40,7 +57,7 @@ const techColors = {
             <h3 class="project__heading__title">{{ project.title }}</h3>
           </div>
           <p class="project__description">{{ project.desc }}</p>
-          <ProjectStack :stack="project.stack" :techColors="techColors" />
+          <ProjectStack :stack="project.stack" :techColors="techColors" :techLabels="techLabels" />
           </RouterLink>
         </div>
       </div>

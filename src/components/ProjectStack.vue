@@ -1,16 +1,16 @@
 
 <template>
-    <div class="project__stack">
-      <span
+  <div class="project__stack">
+    <span
         v-for="tech in stack"
         :key="tech"
         class="project__tech"
-        :style="{ backgroundColor: techColors[tech] || 'grey' }"
-      >
-        {{ tech }}
-      </span>
-    </div>
-  </template>
+        :style="{ backgroundColor: techColors[tech] || '#ddd' }"
+    >
+      {{ techLabels[tech] || tech }}
+    </span>
+  </div>
+</template>
   
   <script setup>
   import { computed } from 'vue';
@@ -24,6 +24,10 @@
       type: Object,
       required: true,
     },
+    techLabels: {
+      type: Object,
+      required: false
+    }
   });
   </script>
   

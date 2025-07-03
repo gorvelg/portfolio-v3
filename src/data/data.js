@@ -6,6 +6,7 @@ import thumbnailIutask from "@/assets/img/thumbnail-iutask.jpg";
 import thumbnailSkyview from "@/assets/img/thumbnail-skyview.jpg";
 import thumbnailMpc from "@/assets/img/thumbnail-mpc.jpg";
 import thumbnailMyTickets from "@/assets/img/thumbnail-my-tickets.jpg";
+import thumbnailPolygones from "@/assets/img/thumbnail-polygones.jpg";
 
 import bannerLaMminuterie from "@/assets/img/banner-la-mminuterie.jpg";
 import bannerDuckyDriver from "@/assets/img/banner-ducky-driver.jpg";
@@ -15,10 +16,12 @@ import bannerIutask from "@/assets/img/banner-iutask.jpg";
 import bannerSkyview from "@/assets/img/banner-skyview.jpg";
 import bannerMpc from "@/assets/img/banner-mpc.jpg";
 import bannerMyTickets from "@/assets/img/banner-my-tickets.jpg";
+import bannerPolygones from "@/assets/img/banner-polygones.jpg";
 
 // Images de la galerie
 import galleryMpc from "@/assets/img/gallery/mpc.jpeg";
 import galleryTicketManager from "@/assets/img/gallery/ticket-manager.png";
+import galleryPolygones from "@/assets/img/gallery/polygone-responsive.jpg";
 
 export const projects = [
   {
@@ -291,6 +294,41 @@ export const projects = [
          Ce projet m'a amené à développer et à implémenter plusieurs modules personnalisés pour répondre aux besoins spécifiques du site et optimiser l'expérience utilisateur.`,
       gallery: [galleryMpc],
       website: "https://mesurezpascher.fr",
+    },
+  },
+  {
+    id: 9,
+    title: "Polygones - Ville du futur",
+    date: "Juin 2025",
+    desc: "Application collaborative pour repenser la ville de demain pour le quartier La Duchère à Lyon.",
+    thumbnail: thumbnailPolygones,
+    stack: ["vuejs", "symfony", "leaflet", "tailwind", "APIPlatform"],
+    sections: {
+      banner: bannerPolygones,
+      overview:
+          "Polygones est une application collaborative pour repenser la ville de demain, en facilitant la remontée de signalements urbains, la participation citoyenne et le dialogue entre habitants du quartier La Duchère à Lyon.",
+      details: `
+        <div class="heading-2">
+            <i class="fa-solid fa-bullseye"></i>
+            Objectifs
+        </div>
+        <ul>
+            <li>Hackathon de <b>5 jours</b> pour concevoir une stratégie de communication digitale et une application qui incarne notre vision de la ville de demain.</li>
+            <li>Mettre en place une <b>carte interactive</b> pour effectuer des signalements.</li>
+             <li>Offrir un <b>espace de discussion</b> type forum pour encourager la participation citoyenne.</li>
+            <li>Développer une landing page</li>
+        </ul><br>
+         <div class="heading-2">
+            <i class="fa-solid fa-stairs"></i>
+        Challenge
+        </div>
+            <ul>
+            <li>Utilisation d'une bibliothèque comme Leafnet pour intégrer une carte avec un système de marquage personnalisée, et géocodage interfacé avec une base de données</li>
+            <li>Architecture <b>full stack modulaire</b> avec un back-end Symfony(API Platform) et front avec Vue 3.</li>
+        </ul>
+      `,
+      gallery: [galleryPolygones],
+      website: "https://polygones.guillaume-gorvel.fr",
     },
   },
 ];
