@@ -258,7 +258,7 @@ La principale contrainte de ce projet était de conserver le <b>jaune vif</b> <s
         galleryDlbdc4,
         galleryDlbdc5,
       ],
-      github: "https://github.com/gorvelg/racontines",
+      github: "https://github.com/gorvelg/dlbdc",
       website: "https://danslaboitedechristine.fr",
     },
   },
