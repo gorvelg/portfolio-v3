@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted } from 'vue'
+import { onMounted, computed } from 'vue'
 import { gsap } from "gsap";
 
 import TechStack from '@/components/TechStack.vue';
@@ -8,6 +8,9 @@ import BorderedBox from "@/components/BorderedBox.vue";
 import Experience from '@/components/Experience.vue';
 import { experiences } from '@/data/experiences';
 
+const birthYear = 1996;
+const currentYear = new Date().getFullYear();
+const age = computed(() => currentYear - birthYear);
 
 onMounted(() => {
   gsap.from('.heading, .techstack__group, .box', {
@@ -26,21 +29,25 @@ onMounted(() => {
     <Heading title="À propos" subtitle="qui suis-je ?" />
     <BorderedBox>
       <p>
-        Je m'appelle Guillaume Gorvel, j'ai 28 ans et je suis <b>étudiant en BUT MMI (Métiers du Multimédia et de l'Internet)</b> à l'IUT de Troyes. Depuis septembre 2024, je suis alternant en tant <b>qu'assistant développeur Web chez Distrame</b>.
+        Je m’appelle <b>Guillaume Gorvel</b>, j’ai {{ age }} ans et je suis <b>développeur web junior full stack</b>, basé à <b>Troyes</b> dans l’Aube (10).
       </p>
       <p>
-        Au cours de cette expérience, j'ai eu l'occasion de renforcer mes compétences dans divers domaines, notamment le développement sur <b>Magento</b> et <b>Symfony</b>, ainsi que la gestion de bases de données.
+        Grâce à mon parcours en <b>BUT Métiers du Multimédia et de l’Internet</b> à l’IUT de Troyes et à mes dernières expériences en développement web, j’ai pu développer mes compétences et me spécialiser sur des technologies comme <b>Magento</b>, <b>WordPress</b>, <b>Symfony</b> et <b>Vue.js</b>.
       </p>
+      <p>
+        Aujourd’hui, je conçois en freelance <b>des sites web sur mesure</b>, pensés pour répondre aux besoins de chaque projet et optimisés pour le référencement. Qu’il s’agisse d’un <b>site vitrine</b>, d’un <b>site de marque</b>, d’un <b>site événementiel</b>, d’une <b>boutique en ligne</b> ou d’un <b>site d’entreprise</b>, mon objectif est de proposer des solutions claires, efficaces et adaptées à vos besoins.
+      </p>
+      
     </BorderedBox>
 
-    <Heading title="Compétences" subtitle="Tech Stacks" />
+    <Heading title="Compétences" subtitle="Tech Stacks" level="h2"/>
     <div class="techstack__group">
       <TechStack title="Langages" :techStack="['Html','Css', 'Javascript', 'Php', 'Scss']" />
       <TechStack title="Framework & CMS" :techStack="['Symfony','VueJS', 'Magento', 'Wordpress']" />
       <TechStack title="Outils" :techStack="['Bootstrap','TailwindCSS', 'Git', 'Docker']" />
     </div>
 
-    <Heading title="Expériences et Formations" subtitle="Mon parcours" />
+    <Heading title="Expériences et Formations" subtitle="Mon parcours" level="h2"/>
     <BorderedBox>
       <Experience :experiences="experiences" />
     </BorderedBox>

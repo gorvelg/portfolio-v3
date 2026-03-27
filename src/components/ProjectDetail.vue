@@ -119,6 +119,7 @@ const techColors = {
   jquery: "#0865A6",
   twig: "#84A21A",
   magento: "#ff9d3d",
+  wordpress: "#118CC3",
   leaflet: "#B4DD65",
   APIPlatform: '#65C9C8'
 };
@@ -133,6 +134,7 @@ const techLabels = {
   php: "PHP",
   jquery: "jQuery",
   twig: "Twig",
+  wordpress: "WordPress",
   magento: "Magento",
   leaflet: "Leaflet",
   APIPlatform: "API Platform"

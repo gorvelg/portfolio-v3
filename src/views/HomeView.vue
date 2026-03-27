@@ -50,9 +50,9 @@ onMounted(() => {
         />
       </div>
       <div class="home__description">
-        <h2 class="home__heading">
+        <h1 class="home__heading">
           Hey 👋,<br> <span>Je suis Guillaume Gorvel.</span>
-        </h2>
+        </h1>
         <p class="home__text">Développeur Web Fullstack Junior</p>
         <div class="home__location">
           <IconLocation />

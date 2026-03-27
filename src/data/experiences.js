@@ -1,5 +1,9 @@
 export const experiences = [
   {
+    title: "Développeur Web Front-end WordPress",
+    date: "2025",
+  },
+  {
     title: "Assistant Développeur Web",
     date: "2023",
   },

@@ -17,6 +17,7 @@ const techColors = {
   jquery: "#0865A6",
   twig: "#84A21A",
   magento: "#ff9d3d",
+  wordpress: "#118CC3",
   leaflet: "#B4DD65",
   APIPlatform: '#65C9C8'
 };
@@ -32,6 +33,7 @@ const techLabels = {
   jquery: "jQuery",
   twig: "Twig",
   magento: "Magento",
+  wordpress: "WordPress",
   leaflet: "Leaflet",
   APIPlatform: "API Platform"
 };
@@ -54,7 +56,7 @@ const techLabels = {
             <span class="project__date">{{ project.date }}</span>
           <div class="project__heading-selected">
             <span class="project__heading__arrow">→</span>
-            <h3 class="project__heading__title">{{ project.title }}</h3>
+            <h2 class="project__heading__title">{{ project.title }}</h2>
           </div>
           <p class="project__description">{{ project.desc }}</p>
           <ProjectStack :stack="project.stack" :techColors="techColors" :techLabels="techLabels" />

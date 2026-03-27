@@ -60,9 +60,7 @@ export const projects = [
 
         `,
 
-      gallery: [
-        galleryTicketManager
-      ],
+      gallery: [galleryTicketManager],
       website: "https://ticket.guillaume-gorvel.fr",
       github: "https://github.com/gorvelg/receipt-manager",
     },
@@ -102,9 +100,7 @@ export const projects = [
             <li>Envoyer un mail pour l'inscription, mais aussi pour les mots de passe oubliés(avec un systeme de token unique).</li>
         </ul><br>
        `,
-      gallery: [
-
-      ],
+      gallery: [],
       github: "https://github.com/elisegrt/SAE_401",
     },
   },
@@ -142,9 +138,7 @@ export const projects = [
             <li>Création de composants Twig.</li>
         </ul><br>
         `,
-      gallery: [
-
-      ],
+      gallery: [],
       github: "https://github.com/BriqueAuBob/sae301",
     },
   },
@@ -178,9 +172,7 @@ export const projects = [
             <li>Utilisation de Figma pour l'UI Design (wireframe et design system, charte graphique).</li>
             <li>Utilisation de Git pour faciliter la collaboration.</li>
         `,
-      gallery: [
-
-      ],
+      gallery: [],
       github: "https://github.com/Rophyr/sae202",
       website: "https://mmi22f01.sae202.ovh",
     },
@@ -218,33 +210,43 @@ export const projects = [
             <li>Déployer sur un VPS le site et sa base de données.</li>
         </ul>
         `,
-      gallery: [
-
-      ],
+      gallery: [],
       github: "https://github.com/gorvelg/sae203",
       website: "https://mmi22f01.sae203.ovh",
     },
   },
   {
     id: 6,
-    title: "La boîte de Christine",
-    date: "Février 2023",
-    desc: "Site vitrine",
+    title: "Dans la boîte de Christine",
+    date: "Février 2026",
+    desc: "Site vitrine pour une créatrice et conteuse pour enfants",
     thumbnail: thumbnailRacontines,
-    stack: ["html", "css", "javascript"],
+    stack: ["wordpress", "javascript"],
     sections: {
       banner: bannerRacontines,
-      overview: "Ceci est une vue d'ensemble du site La boîte de Christine.",
+      overview:
+        "Refonte du site de la créatrice et conteuse pour enfants Christine Voisin.",
       details: `
-        La boîte de Christine est un site vitrine conçu pour présenter
-        les services et produits de Christine. Le design est simple
-        mais élégant, mettant en valeur les contenus de manière
-        professionnelle.`,
-      gallery: [
+        <div class="heading-2">
+    <i class="fa-solid fa-bullseye"></i>
+    Objectifs
+</div>
+<ul>
+    <li>Réaliser la <b>refonte complète du site</b> de Christine Voisin avec une identité visuelle renouvelée.</li>
+    <li>Repenser l’<b>interface utilisateur</b> et l’organisation des contenus pour mieux valoriser ses services et ses produits.</li>
+    <li>Optimiser le <b>référencement naturel (SEO)</b> afin d’améliorer la visibilité du site sur les moteurs de recherche.</li>
+    <li>Intégrer de nouvelles fonctionnalités, notamment une <b>galerie d’images</b> et un <b> formulaire de contact</b>.</li>
+    <li>Développer un site sous <b>WordPress</b> avec un thème sur mesure et des <b>blocs Gutenberg personnalisés</b>, pour permettre à la cliente une gestion autonome des contenus.</li>
+</ul><br>
 
-      ],
+<div class="heading-2">
+    <i class="fa-solid fa-stairs"></i>
+    Challenge
+</div>
+La principale contrainte de ce projet était de conserver le <b>jaune vif</b> <span style="display: inline-block; background-color: #DFFF00; width: 10px; height: 10px; outline: 1px solid var(--text-color-primary-light); margin-right: 4px;"></span>#DFFF00 de l’ancien site, couleur emblématique de l’univers de Christine et évocation directe de sa boîte à histoires. Toute la direction artistique a donc été repensée autour de cette teinte forte, afin de créer un univers à la fois créatif, chaleureux et ludique, enrichi par des couleurs vives, des illustrations inspirées de l’enfance et une typographie adaptée.`,
+      gallery: [],
       github: "https://github.com/gorvelg/racontines",
-      website: "http://guillaume-gorvel.fr/racontines",
+      website: "https://danslaboitedechristine.fr",
     },
   },
   {
@@ -262,9 +264,7 @@ export const projects = [
         célèbre bande rock. Le site présente l'histoire du groupe,
         leurs albums emblématiques, et les moments marquants
         de leur carrière.`,
-      gallery: [
-
-      ],
+      gallery: [],
     },
   },
   {
@@ -307,7 +307,7 @@ export const projects = [
     sections: {
       banner: bannerPolygones,
       overview:
-          "Polygones est une application collaborative pour repenser la ville de demain, en facilitant la remontée de signalements urbains, la participation citoyenne et le dialogue entre habitants du quartier La Duchère à Lyon.",
+        "Polygones est une application collaborative pour repenser la ville de demain, en facilitant la remontée de signalements urbains, la participation citoyenne et le dialogue entre habitants du quartier La Duchère à Lyon.",
       details: `
         <div class="heading-2">
             <i class="fa-solid fa-bullseye"></i>
@@ -338,11 +338,11 @@ export const projects = [
 export const sortedProjects = projects.sort((a, b) => {
   const dateA = new Date(
     a.date.split(" ")[1],
-    getMonthIndex(a.date.split(" ")[0])
+    getMonthIndex(a.date.split(" ")[0]),
   );
   const dateB = new Date(
     b.date.split(" ")[1],
-    getMonthIndex(b.date.split(" ")[0])
+    getMonthIndex(b.date.split(" ")[0]),
   );
   return dateB - dateA;
 });

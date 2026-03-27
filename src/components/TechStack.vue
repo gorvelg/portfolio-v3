@@ -47,7 +47,7 @@ const loadIconComponent = (iconName) => {
     border-radius: 12px;
     padding: 4px;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     transition: cubic-bezier(.175,.885,.32,1.275) .5s;
     width: 100%;
  }
@@ -55,6 +55,7 @@ const loadIconComponent = (iconName) => {
  .tech-stack::before{
     content: "";
     position: absolute;
+    border-radius: 12px;
     top: 0;
     left: 0;
     width: 100%;
