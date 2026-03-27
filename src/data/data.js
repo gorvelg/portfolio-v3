@@ -23,6 +23,12 @@ import galleryMpc from "@/assets/img/gallery/mpc.jpeg";
 import galleryTicketManager from "@/assets/img/gallery/ticket-manager.png";
 import galleryPolygones from "@/assets/img/gallery/polygone-responsive.jpg";
 import galleryPolygones1 from "@/assets/img/gallery/polygones-landing-page.png";
+import galleryDlbdc from "@/assets/img/gallery/dlbdc_home.png";
+import galleryDlbdc1 from "@/assets/img/gallery/dlbdc_prestations.png";
+import galleryDlbdc2 from "@/assets/img/gallery/dlbdc_galerie-cta.png";
+import galleryDlbdc3 from "@/assets/img/gallery/dlbdc_google.png";
+import galleryDlbdc4 from "@/assets/img/gallery/dlbdc_contact.png";
+import galleryDlbdc5 from "@/assets/img/gallery/dlbdc_galerie.png";
 
 export const projects = [
   {
@@ -244,7 +250,14 @@ export const projects = [
     Challenge
 </div>
 La principale contrainte de ce projet était de conserver le <b>jaune vif</b> <span style="display: inline-block; background-color: #DFFF00; width: 10px; height: 10px; outline: 1px solid var(--text-color-primary-light); margin-right: 4px;"></span>#DFFF00 de l’ancien site, couleur emblématique de l’univers de Christine et évocation directe de sa boîte à histoires. Toute la direction artistique a donc été repensée autour de cette teinte forte, afin de créer un univers à la fois créatif, chaleureux et ludique, enrichi par des couleurs vives, des illustrations inspirées de l’enfance et une typographie adaptée.`,
-      gallery: [],
+      gallery: [
+        galleryDlbdc,
+        galleryDlbdc1,
+        galleryDlbdc2,
+        galleryDlbdc3,
+        galleryDlbdc4,
+        galleryDlbdc5,
+      ],
       github: "https://github.com/gorvelg/racontines",
       website: "https://danslaboitedechristine.fr",
     },
