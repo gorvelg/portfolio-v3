@@ -121,7 +121,9 @@ input, textarea {
     padding: 12px 16px;
     border: 1px solid var(--border-color);
     border-radius: 8px;
-    font-size: 1rem;
+    font-size: 1.6rem;
+    background-color: var(--btn-bg-color-primary);
+    font-family: Quicksand, sans-serif;
 }
 input:focus, textarea:focus {
     outline: none;
