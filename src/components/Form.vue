@@ -53,6 +53,7 @@ import { ref } from 'vue'
 const form = ref({
   name: '',
   firstname: '',
+  phone: '',
   email: '',
   message: '',
   website: ''
@@ -62,19 +63,24 @@ const loading = ref(false)
 const successMessage = ref('')
 const errors = ref([])
 
+const apiUrl = import.meta.env.VITE_API_URL
+
+console.log('API URL:', apiUrl)
+
+
 const submitContact = async () => {
   loading.value = true
   successMessage.value = ''
   errors.value = []
 
   try {
-    const response = await fetch('http://localhost:8084/api/contact', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(form.value)
-    })
+    const response = await fetch(`${apiUrl}/api/contact`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(form.value)
+})
 
     const data = await response.json()
 
@@ -140,6 +146,11 @@ textarea {
     gap: 1rem;
     justify-content: space-between;
 }
+
+
+.contact-form > .input-contact:nth-child(3) {
+    margin-bottom: 16px;
+}
 .input-col {
     display: flex;
     flex-direction: column;
@@ -148,9 +159,15 @@ textarea {
 .full {
     width: 100%;
 }
-.half {
-    width: calc(50% - 10px);
+
+.input-contact.full:has(.half) {
+    flex-direction: column;
 }
+
+.input-contact.full:has(.half) .half {
+    width: 100%;
+}
+
 .required {
     color: red;
 }
@@ -184,5 +201,18 @@ textarea {
 }
 .btn--secondary:hover {
   background-color: var(--btn-bg-hover-color-secondary);
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 1024px) {
+    .input-contact.full:has(.half) {
+        flex-direction: row;
+    }
+    .input-contact.full:has(.half) .half {
+        width: calc(50% - 10px);
+        
+    }
 }
 </style>
