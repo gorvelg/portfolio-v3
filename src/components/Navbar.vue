@@ -40,6 +40,11 @@ onMounted(() => {
           to="/projects"
           @click="updateUnderlinePosition"
       >Projets</RouterLink>
+      <RouterLink
+          class="header__navbar-item"
+          to="/contact"
+          @click="updateUnderlinePosition"
+      >Contact</RouterLink>
       <DarkModeButton />
       <div
           class="underline"

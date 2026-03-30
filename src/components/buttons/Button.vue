@@ -53,7 +53,7 @@ export default {
   font-size: 1.6rem;
   cursor: pointer;
   border: var(--border-color) 2px solid;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 5px;
   border-radius: 2.4rem;
   transition: background-color 0.3s ease;
   display: flex;
