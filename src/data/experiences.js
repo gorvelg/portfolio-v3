@@ -11,7 +11,7 @@ export const experiences = [
     title: "Développeur Web Front-end WordPress - Ikadia",
     shortDate: "2025",
     date: "sept. 2025 - déc. 2025",
-    desc: `Développement de sites web sur mesure pour les clients de l'agence, en utilisant <b>WordPress</b> et des blocs Gutemberg personnalisés. Intégration de maquettes fournies par les équipes de design, en veillant à ce que les sites soient responsive, performants et conformes aux normes du web.(RGAA, SEO)`,
+    desc: `Développement de sites web sur mesure pour les clients de l'agence, en utilisant <b>WordPress</b> et des blocs Gutemberg personnalisés. Intégration de maquettes fournies par les équipes de design, en veillant à ce que les sites soient responsive, performants et conformes aux normes du web (RGAA, SEO).`,
     logo: IkadiaLogo,
   },
   {

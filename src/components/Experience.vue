@@ -52,8 +52,9 @@ const selectExperience = (index) => {
 .experience__history {
     margin-bottom: 32px;
     display: flex;
-    gap: 32px;
+    gap: 16px;
     align-items: center;
+    flex-direction: column;
 }
 .experience__history__img {
     flex: 0 0 220px;
@@ -131,7 +132,7 @@ li.experience__item::before {
 
 li.experience__item:hover::before,
 li.experience__item.is-active::before {
-    background: var(--btn-bg-hover-color-primary);
+    background: var(--border-color-selected);
     border-color: var(--border-color-selected);
 }
 
@@ -146,7 +147,9 @@ li.experience__item.is-active {
     margin-left: 24px;
 }
 
+
 @media (min-width: 768px) {
+
     ul.experience__list {
         flex-direction: row-reverse;
     }
@@ -190,5 +193,22 @@ li.experience__item.is-active {
         margin: 0;
         gap: 32px;
     }
+
+    .experience__title {
+            font-size: 1.4rem;
+        }
+
+    @media (min-width: 1024px) {
+        .experience__history {
+            flex-direction: row;
+        }
+        
+    }
+
+    @media (min-width: 1224px) {
+        .experience__title {
+            font-size: 1.6rem;
+        }
+    } 
 }
 </style>
