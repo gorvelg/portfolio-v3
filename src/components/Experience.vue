@@ -1,5 +1,5 @@
 <script setup>
-import { defineProps } from 'vue';
+import { defineProps, ref, computed } from 'vue';
 
 const props = defineProps({
     experiences: {
@@ -7,21 +7,75 @@ const props = defineProps({
         required: true,
     },
 });
+
+const selectedIndex = ref(0);
+
+const selectedExperience = computed(() => props.experiences[selectedIndex.value]);
+
+const selectExperience = (index) => {
+    selectedIndex.value = index;
+};
 </script>
 
 <template>
-    <ul>
-        <li v-for="(experience, index) in experiences" :key="index">
+    <!-- Slider / contenu au-dessus -->
+    <div v-if="selectedExperience" class="experience__history">
+        <div class="experience__history__img">
+            <img :src="selectedExperience.logo" alt="Logo de l'expérience" />
+        </div>
+        <div class="experience__history__content">
+            <p class="experience__history__title">{{ selectedExperience.title }}</p>
+            <p class="experience__history__date">{{ selectedExperience.date }}</p> 
+            <p class="experience__history__desc" v-html="selectedExperience.desc"></p>
+        </div>
+    </div>
+
+    <!-- Timeline -->
+    <ul class="experience__list">
+        <li
+            class="experience__item"
+            v-for="(experience, index) in experiences"
+            :key="index"
+            :class="{ 'is-active': index === selectedIndex }"
+            @click="selectExperience(index)"
+        >
             <div class="experience__content">
-                <span class="experience__title">{{ experience.title }}</span>
-                <span class="experience__date">{{ experience.date }}</span>
+                <span class="experience__title">{{ experience.shortTitle }}</span>
+                <span class="experience__date">{{ experience.shortDate }}</span>
             </div>
         </li>
     </ul>
 </template>
 
 <style scoped>
-ul {
+
+.experience__history {
+    margin-bottom: 32px;
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+.experience__history__img {
+    flex: 0 0 220px;
+    height: 220px;
+}
+.experience__history__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.experience__history__title {
+    color: var(--text-color-primary);
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+.experience__history__date {
+    color: var(--text-color-secondary);
+    font-size: 1.6rem;
+    margin-bottom: 16px;
+}
+
+ul.experience__list {
     list-style: none;
     padding: 0;
     display: flex;
@@ -29,8 +83,10 @@ ul {
     position: relative;
     justify-content: center;
     flex-direction: column;
+    cursor: pointer;
 }
-ul:after{
+
+ul.experience__list:after{
     content: "";
     width: 0;
     height: 0;
@@ -41,8 +97,9 @@ ul:after{
     left: 0;
     bottom: -5px;
     transform: translateX(-50%);
-    }
-ul::before {
+}
+
+ul.experience__list::before {
     background: var(--border-color) none repeat scroll 0 0;
     content: "";
     height: 100%;
@@ -53,13 +110,13 @@ ul::before {
     transform: translateX(-50%);
 }
 
-li {
+li.experience__item {
     margin: 0;
     padding: 0;
     position: relative;
 }
 
-li::before {
+li.experience__item::before {
     background: var(--btn-bg-color-primary);
     border: 2px solid var(--border-color);
     border-radius: 50%;
@@ -72,12 +129,15 @@ li::before {
     width: 24px;
 }
 
-li:hover::before {
+li.experience__item:hover::before,
+li.experience__item.is-active::before {
     background: var(--btn-bg-hover-color-primary);
     border-color: var(--border-color-selected);
 }
-li:hover {
-  color: var(--hover-link-text-color);
+
+li.experience__item:hover,
+li.experience__item.is-active {
+    color: var(--hover-link-text-color);
 }
 
 .experience__content {
@@ -87,10 +147,11 @@ li:hover {
 }
 
 @media (min-width: 768px) {
-    ul {
+    ul.experience__list {
         flex-direction: row-reverse;
     }
-    ul:after{
+
+    ul.experience__list:after{
         content: "";
         width: 0;
         height: 0;
@@ -104,7 +165,8 @@ li:hover {
         bottom: unset;
         left: unset;
     }
-    ul::before {
+
+    ul.experience__list::before {
         background: var(--border-color) none repeat scroll 0 0;
         content: "";
         height: 3px;
@@ -115,7 +177,7 @@ li:hover {
         transform: translateX(0);
     }
 
-    li::before {
+    li.experience__item::before {
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
